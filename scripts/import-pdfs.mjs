@@ -328,7 +328,7 @@ async function downloadPhotos(attractions) {
 }
 
 /** Replace photo links with the downloaded local files; drop photos that failed. */
-function useLocalPhotos(attractions, map) {
+function applyLocalPhotos(attractions, map) {
   const local = (p) => (p && map[p.src]?.path ? { ...p, src: map[p.src].path, original: p.src } : null);
   for (const a of attractions) {
     a.banner = local(a.banner);
@@ -426,7 +426,7 @@ async function main() {
 
   // ---- download photos and switch to local files ----
   const map = await downloadPhotos(attractions);
-  useLocalPhotos(attractions, map);
+  applyLocalPhotos(attractions, map);
   const failedByHost = {};
   for (const [u, v] of Object.entries(map)) if (v.error) failedByHost[new URL(u).hostname] = (failedByHost[new URL(u).hostname] || 0) + 1;
 
