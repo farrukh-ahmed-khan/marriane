@@ -21,9 +21,17 @@ npm start
 | `data/counties.json` | edit by hand | `/county-tags/<slug>/` (36 county pages) |
 | `data/capers.json`, `data/products.json` | edit by hand | `/capers/<slug>/`, `/shop/`, `/product/<slug>/` |
 
-Static images (logo, county badges, hero backgrounds) are local files in `public/`.
-Attraction photos are the **image links from the documents**, loaded directly from
-the site that hosts them.
+**Every image is a local file in `public/images/`** — nothing is loaded from another website:
+
+```
+public/images/
+  site/          logo, county badge, stat icons, footer artwork, listing hero
+  home/          home page backgrounds and cards
+  history/       history page images (tribe-N-photo / tribe-N-badge)
+  counties/<county-slug>/   hero, card, logo, gallery-N
+  products/      shop images
+  attractions/<county-slug>/<attraction-slug>-N.webp   downloaded from the document photo links
+```
 
 ## Adding / updating attractions
 
@@ -31,7 +39,9 @@ the site that hosts them.
    one attraction per section with INFO BAR AND MAP, TOP BANNER PHOTO, PHOTO GALLERY,
    ABOUT, NOTE UNDER ABOUT TEXT, TIMINGS).
 2. Run `npm run import` — it rewrites `data/attractions.json` and `data/categories.json`
-   from **all** PDFs in `doc/` and prints a summary.
+   from **all** PDFs in `doc/`, downloads any new photo links into
+   `public/images/attractions/` (resized to max 1280px wide, WebP) and prints a summary.
+   Photos already downloaded are reused (`data/photo-sources.json` maps link → file).
 3. `npm run build`.
 
 Notes on the import (`scripts/import-pdfs.mjs`):
@@ -46,16 +56,16 @@ Notes on the import (`scripts/import-pdfs.mjs`):
 
 Don't hand-edit `attractions.json` — the next import overwrites it. Fix the document instead.
 
-## Photos that can't be shown
+## Photos that couldn't be downloaded
 
-Some sites block other websites from displaying their images (hotlink protection).
-`www.fs.usda.gov` does this; it's listed in `BLOCKED_HOSTS` in `src/lib/data.ts`, so those
-photos are tried last. Any photo that fails to load falls back to the attraction's next photo,
-then to a neutral placeholder.
+Some sites refuse automated downloads (e.g. `www.fs.usda.gov` answers 403). Those photos are
+left out; an attraction with no photo shows a neutral placeholder. The import summary lists
+failures by site, and `npm run import -- --retry-failed` tries them again.
 
-`reports/attractions-needing-photos.csv` lists attractions with no displayable photo.
-To fix one, either put a photo from a site that allows embedding in the document, or download
-a photo you have rights to into `public/` and reference it as `/path/to/photo.jpg`.
+`reports/attractions-needing-photos.csv` lists attractions that ended up with no photo.
+To fix one, save a photo you have rights to (e.g. downloaded manually in your browser) and
+replace the link in the document, or add it under `public/images/attractions/…` and put that
+link → file pair in `data/photo-sources.json` (`"https://link": { "path": "/images/attractions/…webp" }`).
 
 ## Not migrated (needs a decision)
 

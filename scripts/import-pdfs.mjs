@@ -4,8 +4,11 @@
  *
  *   npm run import            # all PDFs in /doc
  *
- * No network access: text is read from the PDFs and image links are kept
- * exactly as written in the documents ("Open image file" links).
+ * Text is read from the PDFs. Every photo link ("Open image file") is
+ * downloaded once, resized (max 1280px wide, WebP) and saved under
+ * public/images/attractions/<county>/. data/photo-sources.json remembers
+ * which link became which file, so re-running only downloads new photos.
+ * Photos that can't be downloaded are left out (listed in the summary).
  *
  * Each attraction section in a PDF looks like:
  *   <CATEGORY> · 01 OF 36 / Title
@@ -17,13 +20,14 @@
  *   TIMINGS            (Saturday … Friday) + "Photos: credit"
  */
 import { getDocument } from "pdfjs-dist/legacy/build/pdf.mjs";
+import sharp from "sharp";
 import crypto from "node:crypto";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const DOC = path.join(ROOT, "doc");
+const DOC = process.env.DOC_DIR ? path.resolve(process.env.DOC_DIR) : path.join(ROOT, "doc");
 const DATA = path.join(ROOT, "data");
 
 const LABEL_X = 69; // left column (labels, photo column 1)
@@ -221,6 +225,119 @@ function parseCounty(lines, file) {
 
 const esc = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
+// ---------------- photo download ----------------
+const PUBLIC = path.join(ROOT, "public");
+const PHOTO_MAP = path.join(DATA, "photo-sources.json");
+const MAX_WIDTH = 1280;
+const BROWSER_HEADERS = {
+  "User-Agent":
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+  Accept: "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+};
+
+async function downloadOne(url, destNoExt) {
+  let lastErr = "";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const res = await fetch(url, { headers: BROWSER_HEADERS, redirect: "follow", signal: AbortSignal.timeout(45000) });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const buf = Buffer.from(await res.arrayBuffer());
+      const out = await sharp(buf, { failOn: "none" })
+        .rotate() // respect EXIF orientation
+        .resize({ width: MAX_WIDTH, withoutEnlargement: true })
+        .webp({ quality: 72 })
+        .toBuffer();
+      const rel = `${destNoExt}.webp`;
+      await fs.mkdir(path.dirname(path.join(PUBLIC, rel)), { recursive: true });
+      await fs.writeFile(path.join(PUBLIC, rel), out);
+      return { path: rel };
+    } catch (e) {
+      lastErr = e.name === "TimeoutError" ? "timeout" : e.message.split("\n")[0];
+      if (/HTTP 4\d\d/.test(lastErr)) break; // don't retry 403/404
+    }
+  }
+  return { error: lastErr };
+}
+
+/** Download every photo link; returns {url: {path} | {error}}. */
+async function downloadPhotos(attractions) {
+  let map = {};
+  try {
+    map = JSON.parse(await fs.readFile(PHOTO_MAP, "utf8"));
+  } catch {}
+  // drop cache entries whose file was deleted
+  for (const [u, v] of Object.entries(map)) {
+    if (v.path) {
+      try {
+        await fs.access(path.join(PUBLIC, v.path));
+      } catch {
+        delete map[u];
+      }
+    }
+  }
+  const retryFailed = process.argv.includes("--retry-failed");
+
+  // Decide a file name for each new URL (first attraction that uses it)
+  const jobs = [];
+  const taken = new Set(Object.values(map).map((v) => v.path).filter(Boolean));
+  for (const a of attractions) {
+    const county = a.counties[0];
+    [a.banner, ...a.gallery].filter(Boolean).forEach((p, i) => {
+      if (map[p.src]?.path || (map[p.src]?.error && !retryFailed) || jobs.some((j) => j.url === p.src)) return;
+      let name = `/images/attractions/${county}/${a.slug}-${i + 1}`;
+      for (let n = 2; taken.has(`${name}.webp`); n++) name = `/images/attractions/${county}/${a.slug}-${i + 1}-${n}`;
+      taken.add(`${name}.webp`);
+      jobs.push({ url: p.src, dest: name });
+    });
+  }
+
+  if (jobs.length) console.log(`\nDownloading ${jobs.length} new photos…`);
+  // Limit to 2 parallel downloads per site and 12 overall.
+  const perHost = new Map();
+  let done = 0, active = 0, next = 0;
+  await new Promise((resolve) => {
+    if (!jobs.length) return resolve();
+    const pump = () => {
+      while (active < 12 && next < jobs.length) {
+        const idx = jobs.findIndex((j, k) => k >= next && !j.started && (perHost.get(new URL(j.url).hostname) || 0) < 2);
+        if (idx === -1) break;
+        const job = jobs[idx];
+        job.started = true;
+        if (idx === next) while (next < jobs.length && jobs[next].started) next++;
+        const host = new URL(job.url).hostname;
+        perHost.set(host, (perHost.get(host) || 0) + 1);
+        active++;
+        downloadOne(job.url, job.dest).then(async (r) => {
+          map[job.url] = r;
+          perHost.set(host, perHost.get(host) - 1);
+          active--;
+          done++;
+          if (done % 100 === 0 || done === jobs.length) {
+            console.log(`  ${done}/${jobs.length}`);
+            await fs.writeFile(PHOTO_MAP, JSON.stringify(map, null, 1) + "\n"); // checkpoint
+          }
+          if (done === jobs.length) resolve();
+          else pump();
+        });
+      }
+    };
+    pump();
+  });
+  await fs.writeFile(PHOTO_MAP, JSON.stringify(map, null, 1) + "\n");
+  return map;
+}
+
+/** Replace photo links with the downloaded local files; drop photos that failed. */
+function useLocalPhotos(attractions, map) {
+  const local = (p) => (p && map[p.src]?.path ? { ...p, src: map[p.src].path, original: p.src } : null);
+  for (const a of attractions) {
+    a.banner = local(a.banner);
+    a.gallery = a.gallery.map(local).filter(Boolean);
+    a.image = a.banner?.src || a.gallery[0]?.src || null;
+    a.imageAlt = a.banner?.alt || a.gallery[0]?.alt || a.title;
+  }
+}
+
 async function main() {
   const files = (await fs.readdir(DOC)).filter((f) => /\.pdf$/i.test(f));
   const seenHashes = new Map();
@@ -304,6 +421,15 @@ async function main() {
   });
 
   await fs.mkdir(DATA, { recursive: true });
+  const countPhotos = (list) => list.reduce((n, x) => n + (x.banner ? 1 : 0) + x.gallery.length, 0);
+  const linkedPhotos = countPhotos(attractions);
+
+  // ---- download photos and switch to local files ----
+  const map = await downloadPhotos(attractions);
+  useLocalPhotos(attractions, map);
+  const failedByHost = {};
+  for (const [u, v] of Object.entries(map)) if (v.error) failedByHost[new URL(u).hostname] = (failedByHost[new URL(u).hostname] || 0) + 1;
+
   await fs.writeFile(path.join(DATA, "attractions.json"), JSON.stringify(attractions, null, 2) + "\n");
   await fs.writeFile(path.join(DATA, "categories.json"), JSON.stringify(categories, null, 2) + "\n");
 
@@ -311,9 +437,14 @@ async function main() {
   const noImg = attractions.filter((a) => !a.image).length;
   const noTime = attractions.filter((a) => a.timings.length !== 7).length;
   const noAbout = attractions.filter((a) => !a.contentHtml).length;
-  const countPhotos = (list) => list.reduce((n, x) => n + (x.banner ? 1 : 0) + x.gallery.length, 0);
   console.log(`\nWrote ${attractions.length} attractions (${raw.length} PDF entries) in ${categories.length} categories.`);
-  console.log(`  photos: ${countPhotos(raw)} in PDFs, ${countPhotos(attractions)} after merging repeated entries`);
+  console.log(`  photos: ${countPhotos(raw)} links in PDFs, ${linkedPhotos} after merging repeats, ${countPhotos(attractions)} downloaded & used`);
+  const failedTotal = Object.values(failedByHost).reduce((a, b) => a + b, 0);
+  if (failedTotal) {
+    console.log(`  ${failedTotal} photo links could not be downloaded (by site):`);
+    for (const [h, n] of Object.entries(failedByHost).sort((a, b) => b[1] - a[1]).slice(0, 15)) console.log(`    ${h}: ${n}`);
+    console.log(`  (run "npm run import -- --retry-failed" to try them again)`);
+  }
   console.log(`  without any photo: ${noImg}, without 7 timing rows: ${noTime}, without about text: ${noAbout}`);
 }
 

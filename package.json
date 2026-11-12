@@ -22,6 +22,7 @@
     "eslint": "^9",
     "eslint-config-next": "15.5.4",
     "pdfjs-dist": "^4.10.38",
+    "sharp": "^0.34.5",
     "typescript": "^5"
   }
 }

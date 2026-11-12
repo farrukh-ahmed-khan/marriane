@@ -32,7 +32,8 @@ export type County = {
   gallery: string[];
 };
 
-export type PhotoRef = { src: string; alt: string; sourcePage: string | null; sourceSite: string };
+/** src = local file in /public; original = link from the county document (kept for credit). */
+export type PhotoRef = { src: string; alt: string; sourcePage: string | null; sourceSite: string; original?: string };
 
 export type Attraction = {
   id: number;
@@ -60,18 +61,12 @@ export type Attraction = {
   categories: string[];
 };
 
-/**
- * Sites that refuse to let other websites display their images (hotlink
- * protection). Their photos are only used as a last resort.
- */
-const BLOCKED_HOSTS = ["www.fs.usda.gov"];
-export const isBlocked = (src: string) => BLOCKED_HOSTS.some((h) => src.includes(`//${h}/`));
-
-/** Photo candidates for an attraction: banner first, then gallery; blocked hosts last. */
-export const photoCandidates = (a: Pick<Attraction, "banner" | "gallery">, max = 4) => {
-  const all = [a.banner, ...a.gallery].filter((p) => p !== null).map((p) => p.src);
-  return [...all.filter((s) => !isBlocked(s)), ...all.filter(isBlocked)].slice(0, max);
-};
+/** An attraction's photos (local files): banner first, then gallery. */
+export const photoCandidates = (a: Pick<Attraction, "banner" | "gallery">, max = 4) =>
+  [a.banner, ...a.gallery]
+    .filter((p) => p !== null)
+    .map((p) => p.src)
+    .slice(0, max);
 
 /** Small version of an attraction for grids/filters sent to the browser. */
 export type AttractionCard = Pick<Attraction, "slug" | "title" | "imageAlt" | "counties" | "categories"> & {
@@ -80,7 +75,7 @@ export type AttractionCard = Pick<Attraction, "slug" | "title" | "imageAlt" | "c
 export const toCard = (a: Attraction): AttractionCard => ({
   slug: a.slug,
   title: a.title,
-  images: photoCandidates(a, 3),
+  images: photoCandidates(a, 1),
   imageAlt: a.imageAlt,
   counties: a.counties,
   categories: a.categories,

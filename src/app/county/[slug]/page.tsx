@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Photo from "@/components/Photo";
 import { Breadcrumb, Html, PageHero } from "@/components/ui";
-import { assets, attractions, getAttraction, getCategory, getCounty, isBlocked, photoCandidates } from "@/lib/data";
+import { assets, attractions, getAttraction, getCategory, getCounty, photoCandidates } from "@/lib/data";
 
 /**
  * ONE template for every attraction (data/attractions.json, generated
@@ -42,8 +42,7 @@ export default async function AttractionPage({ params }: Props) {
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const timings = [...a.timings].sort((x, y) => DAY_ORDER.indexOf(x.day) - DAY_ORDER.indexOf(y.day));
   const sameHours = timings.length > 0 && timings.every((t) => t.hours === timings[0].hours);
-  // Photos from sites that block embedding can't be shown, so skip them.
-  const gallery = a.gallery.filter((p) => !isBlocked(p.src));
+  const gallery = a.gallery;
   const sources = [...new Map([a.banner, ...a.gallery].filter((p) => p?.sourcePage).map((p) => [p!.sourceSite, p!.sourcePage!])).entries()];
 
   const info = [
@@ -119,7 +118,7 @@ export default async function AttractionPage({ params }: Props) {
                 {gallery.map((p) => (
                   <figure key={p.src}>
                     <a href={p.src} target="_blank" rel="noopener noreferrer" className="frame">
-                      <Photo src={p.src} alt={p.alt} hideOnError />
+                      <Photo src={p.src} alt={p.alt} sizes="(max-width: 860px) 50vw, 260px" />
                     </a>
                     <figcaption>{p.alt}</figcaption>
                   </figure>

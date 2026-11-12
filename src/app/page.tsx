@@ -17,14 +17,14 @@ export default function Home() {
   const interests = categories
     .map((c) => {
       const list = attractionsInCategory(c.slug);
-      const pick = list.find((a) => a.banner && !a.banner.src.includes("fs.usda.gov")) || list.find((a) => a.banner);
+      const pick = list.find((a) => a.banner);
       return { ...c, count: list.length, image: pick?.banner?.src ?? null, alt: pick?.banner?.alt ?? c.name };
     })
     .filter((c) => c.count > 0);
 
   // Featured: one attraction with a banner photo and a note from each of several counties.
   const featured = counties
-    .map((c) => attractionsInCounty(c.slug).find((a) => a.banner && a.excerpt && !a.banner.src.includes("fs.usda.gov")))
+    .map((c) => attractionsInCounty(c.slug).find((a) => a.banner && a.excerpt))
     .filter((a) => a !== undefined)
     .slice(0, 8);
   const countiesWithCounts = counties.map((c) => ({ ...c, count: attractionsInCounty(c.slug).length }));
