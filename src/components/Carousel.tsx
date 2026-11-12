@@ -6,11 +6,13 @@ import { useRef, type CSSProperties, type ReactNode } from "react";
 export default function Carousel({
   title,
   itemWidth = "300px",
+  gap = "20px",
   children,
   dark,
 }: {
   title: string;
   itemWidth?: string;
+  gap?: string;
   children: ReactNode;
   dark?: boolean;
 }) {
@@ -29,7 +31,7 @@ export default function Carousel({
           <button aria-label="Next" onClick={() => scroll(1)}>→</button>
         </div>
       </div>
-      <div className="carousel-track" ref={track} style={{ "--item": itemWidth } as CSSProperties}>
+      <div className="carousel-track" ref={track} style={{ "--item": itemWidth, "--gap": gap } as CSSProperties}>
         {children}
       </div>
     </div>

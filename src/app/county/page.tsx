@@ -11,15 +11,14 @@ export const metadata: Metadata = {
 export default function AllAttractionsPage() {
   return (
     <>
-      <PageHero title="All Attractions" image={null} />
-      <div className="container" style={{ paddingTop: 28, marginBottom: -20 }}>
-        <Breadcrumb items={[{ href: "/", label: "Home" }, { label: "Attractions" }]} />
-      </div>
+      <PageHero title="County" image={null} />
       <AttractionBrowser
         attractions={attractions.map(toCard)}
         filters={categoriesFor(attractions)}
         filterBy="categories"
         heading="All Attractions"
+        columns={5}
+        sidebarTop={<Breadcrumb items={[{ href: "/", label: "Home" }, { label: "County" }]} />}
       />
     </>
   );

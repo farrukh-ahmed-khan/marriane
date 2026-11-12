@@ -89,9 +89,9 @@ const tribes = [
 export default function HistoryPage() {
   return (
     <>
-      <PageHero title="History" image={`${U}/hero.png`} />
+      <PageHero title="History" image={`${U}/hero.png`} variant="history" />
 
-      <section className="section history-intro">
+      <section className="history-intro">
         <div className="container inner">
           <div>
             <h2>Oregon - Land, People, and Time</h2>
@@ -110,7 +110,7 @@ export default function HistoryPage() {
         </div>
       </section>
 
-      <section className="section overview" style={{ paddingBottom: 0 }}>
+      <section className="overview">
         <div className="container">
           <h2 className="section-title center">
             Oregon
@@ -125,7 +125,7 @@ export default function HistoryPage() {
                 </div>
               ))}
             </div>
-            <div style={{ position: "relative", aspectRatio: "1384 / 1114", alignSelf: "end" }}>
+            <div className="lighthouse">
               <Image
                 src={`${U}/lighthouse.png`}
                 alt="Cape Disappointment lighthouse"
@@ -146,7 +146,7 @@ export default function HistoryPage() {
       </section>
 
       {tribes.map((t, i) => (
-        <section key={t.name} className={`section tribe${i % 2 ? " flip" : ""}`}>
+        <section key={t.name} className={`tribe${i % 2 ? " flip" : ""}`}>
           <div className="container inner">
             <div className="photo">
               <Image src={`${U}/${t.photo}`} alt={t.name} fill sizes="(max-width: 860px) 100vw, 600px" />

@@ -40,7 +40,7 @@ export default async function CountyPage({ params }: Props) {
 
   return (
     <>
-      <PageHero title={county.tagline} image={county.heroImage}>
+      <PageHero title={county.tagline} image={county.heroImage} variant="county">
         {county.intro && <p>{county.intro}</p>}
       </PageHero>
 
@@ -48,22 +48,22 @@ export default async function CountyPage({ params }: Props) {
         <div className="stat-bar">
           <div className="stat name">
             <div className="logo">
-              <Image src={county.logo || assets.countyBadge} alt={`${county.name} logo`} fill sizes="74px" />
+              <Image src={county.logo || assets.countyBadge} alt={`${county.name} logo`} fill sizes="150px" />
             </div>
             <h3>{county.name}</h3>
           </div>
           {stats.map((s) => (
             <div className="stat" key={s.label}>
               <div className="icon">
-                <Image src={s.icon} alt="" fill sizes="44px" />
+                <Image src={s.icon} alt="" fill sizes="50px" />
               </div>
               <h3>{s.label}</h3>
               {s.value || "—"}
             </div>
           ))}
-          <a className="stat" href={mapUrl} target="_blank" rel="noopener noreferrer">
+          <a className="stat map" href={mapUrl} target="_blank" rel="noopener noreferrer">
             <div className="icon">
-              <Image src={assets.icons.map} alt="" fill sizes="44px" />
+              <Image src={assets.icons.map} alt="" fill sizes="50px" />
             </div>
             <h3>MAP</h3>
             {county.mapLabel}
@@ -71,11 +71,14 @@ export default async function CountyPage({ params }: Props) {
         </div>
       </div>
 
-      <div className="container" style={{ paddingTop: 28, marginBottom: -20 }}>
-        <Breadcrumb items={[{ href: "/", label: "Home" }, { href: "/county-tags/", label: "County Tags" }, { label: county.name }]} />
-      </div>
-
-      <AttractionBrowser attractions={list.map(toCard)} filters={categoriesFor(list)} filterBy="categories">
+      <AttractionBrowser
+        attractions={list.map(toCard)}
+        filters={categoriesFor(list)}
+        filterBy="categories"
+        sidebarTop={
+          <Breadcrumb items={[{ href: "/", label: "Home" }, { href: "/county-tags/", label: "County Tags" }, { label: county.name }]} />
+        }
+      >
         <Html className="prose" html={county.contentHtml} />
 
         {county.gallery.length > 0 && (

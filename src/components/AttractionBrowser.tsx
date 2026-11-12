@@ -18,8 +18,12 @@ export default function AttractionBrowser({
   filterTitle = "Filter by attraction",
   heading = "Famous Attractions",
   emptyText = "Attractions for this county are coming soon.",
+  columns = 4,
+  sidebarTop,
   children,
 }: {
+  columns?: 4 | 5;
+  sidebarTop?: React.ReactNode; // e.g. breadcrumb, shown above the search box
   attractions: AttractionCard[];
   filters: { slug: string; name: string }[];
   filterBy: "categories" | "counties";
@@ -52,6 +56,7 @@ export default function AttractionBrowser({
   return (
     <div className="county-layout container">
       <aside className="sidebar">
+        {sidebarTop}
         <div className="box">
           <input
             className="search-input"
@@ -100,7 +105,7 @@ export default function AttractionBrowser({
         </div>
         {visible.length ? (
           <>
-            <div className="grid grid-4" style={{ gap: 10 }}>
+            <div className={`grid grid-${columns}`} style={{ gap: 10 }}>
               {visible.slice(0, limit).map((a) => (
                 <AttractionTile key={a.slug} a={a} />
               ))}

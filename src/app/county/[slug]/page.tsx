@@ -41,7 +41,6 @@ export default async function AttractionPage({ params }: Props) {
   const mapEmbed = `https://maps.google.com/maps?q=${encodeURIComponent(mapQuery)}&t=m&z=12&output=embed`;
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const timings = [...a.timings].sort((x, y) => DAY_ORDER.indexOf(x.day) - DAY_ORDER.indexOf(y.day));
-  const sameHours = timings.length > 0 && timings.every((t) => t.hours === timings[0].hours);
   const gallery = a.gallery;
   const sources = [...new Map([a.banner, ...a.gallery].filter((p) => p?.sourcePage).map((p) => [p!.sourceSite, p!.sourcePage!])).entries()];
 
@@ -60,20 +59,20 @@ export default async function AttractionPage({ params }: Props) {
 
   return (
     <>
-      <PageHero title={a.title} image={photoCandidates(a, 8)} />
+      <PageHero title={a.title} image={photoCandidates(a, 8)} variant="attraction" />
 
       <div className="info-bar">
         <div className="container inner">
           <div className="badge-wrap">
             <div className="badge">
-              <Image src={county?.logo || assets.countyBadge} alt="" fill sizes="96px" />
+              <Image src={county?.logo || assets.countyBadge} alt="" fill sizes="120px" />
             </div>
             <strong>{a.title}</strong>
           </div>
           {info.map((i) => (
             <div className="info-item" key={i.label}>
               <div className="icon">
-                <Image src={i.icon} alt="" fill sizes="38px" />
+                <Image src={i.icon} alt="" fill sizes="46px" />
               </div>
               <div>
                 <b>{i.label}</b>
@@ -82,13 +81,13 @@ export default async function AttractionPage({ params }: Props) {
             </div>
           ))}
           <a className="map-link" href={mapLink} target="_blank" rel="noopener noreferrer">
-            <Image src={assets.icons.map} alt="" width={32} height={32} />
+            <Image src={assets.icons.map} alt="" width={44} height={44} />
             Map
           </a>
         </div>
       </div>
 
-      <div className="container" style={{ paddingTop: 20 }}>
+      <div className="container" style={{ paddingTop: 30 }}>
         <Breadcrumb
           items={[
             { href: "/", label: "Home" },
@@ -159,24 +158,19 @@ export default async function AttractionPage({ params }: Props) {
         </div>
 
         <aside>
-          <div className="card timings">
+          <div className="timings">
             <iframe src={mapEmbed} title={`Map of ${a.title}`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
-            {hasCoords && (
-              <p className="coords">
-                {a.latitude}, {a.longitude}
-              </p>
-            )}
-            {timings.length > 0 && (
-              <>
-                <div className="head">
-                  <h2>Timings</h2>
-                </div>
-                {sameHours ? (
-                  <p className="same-hours">
-                    <b>Every day</b>
-                    {timings[0].hours || "—"}
-                  </p>
-                ) : (
+            <div className="body">
+              {hasCoords && (
+                <p className="coords">
+                  {a.latitude}, {a.longitude}
+                </p>
+              )}
+              {timings.length > 0 && (
+                <>
+                  <div className="head">
+                    <h2>Timings</h2>
+                  </div>
                   <ul>
                     {timings.map((t) => (
                       <li key={t.day}>
@@ -185,9 +179,9 @@ export default async function AttractionPage({ params }: Props) {
                       </li>
                     ))}
                   </ul>
-                )}
-              </>
-            )}
+                </>
+              )}
+            </div>
           </div>
         </aside>
       </div>

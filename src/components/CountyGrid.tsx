@@ -2,7 +2,16 @@
 
 import { useState } from "react";
 import type { County } from "@/lib/data";
-import { CountyCard } from "./ui";
+import { CountyCard, Trail } from "./ui";
+
+export function SearchIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" aria-hidden>
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </svg>
+  );
+}
 
 export default function CountyGrid({
   counties,
@@ -23,14 +32,20 @@ export default function CountyGrid({
   return (
     <>
       <div className="toolbar">
-        <h2>{title}</h2>
+        <div>
+          <Trail items={[{ href: "/", label: "Home" }, { label: "Counties" }]} />
+          <h2>{title}</h2>
+        </div>
         <div className="controls">
           <select value={sort} onChange={(e) => setSort(e.target.value)} aria-label="Sort counties">
             <option value="default">Default sorting</option>
             <option value="az">By title from lowest to highest</option>
             <option value="za">By title from highest to lowest</option>
           </select>
-          <input type="search" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Search counties" />
+          <label className="search-field">
+            <input type="search" placeholder="Search" value={query} onChange={(e) => setQuery(e.target.value)} aria-label="Search counties" />
+            <SearchIcon />
+          </label>
         </div>
       </div>
       {list.length ? (

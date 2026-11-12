@@ -18,7 +18,13 @@ export default function Home() {
     .map((c) => {
       const list = attractionsInCategory(c.slug);
       const pick = list.find((a) => a.banner);
-      return { ...c, count: list.length, image: pick?.banner?.src ?? null, alt: pick?.banner?.alt ?? c.name };
+      return {
+        ...c,
+        count: list.length,
+        counties: new Set(list.flatMap((a) => a.counties)).size,
+        image: pick?.banner?.src ?? null,
+        alt: pick?.banner?.alt ?? c.name,
+      };
     })
     .filter((c) => c.count > 0);
 
@@ -53,18 +59,20 @@ export default function Home() {
       </section>
 
       {/* CHOOSE YOUR WAY */}
-      <section className="section">
+      <section className="section choose-section">
         <div className="container">
           <h2 className="section-title center">Choose Your Way to Explore</h2>
-          <div className="grid grid-3" style={{ marginTop: 30 }}>
+          <div className="choice-grid">
             {choices.map((c) => (
-              <div key={c.title} className="card choice-card">
+              <div key={c.title} className="choice-card">
                 <div className="img">
-                  <Image src={c.img} alt={c.title} fill sizes="(max-width: 860px) 100vw, 400px" />
+                  <Image src={c.img} alt={c.title} fill sizes="(max-width: 767px) 100vw, 360px" />
                 </div>
-                <h3>{c.title}</h3>
-                <p>{c.text}</p>
-                <Link href={c.href} className="link-underline">{c.cta}</Link>
+                <div className="text">
+                  <h3>{c.title}</h3>
+                  <p>{c.text}</p>
+                  <Link href={c.href} className="choice-link">{c.cta}</Link>
+                </div>
               </div>
             ))}
           </div>
@@ -86,32 +94,38 @@ export default function Home() {
               historic towns, wine regions, and vibrant cultural spaces. Oregon County Capers brings everything together in
               one organized, easy-to-explore destination.
             </p>
-            <p style={{ color: "var(--teal)", fontWeight: 600, margin: "18px 0 0" }}>Why Oregon County Capers</p>
+            <p className="why">Why Oregon County Capers</p>
             <ul className="check-list">
               <li>Covers all 36 Oregon counties in one platform</li>
               <li>Combines statewide discovery with local depth</li>
               <li>Highlights both popular landmarks and hidden gems</li>
               <li>Designed to grow with new attractions and experiences</li>
             </ul>
-            <Link href="/history/" className="btn btn-green">Read More About Us</Link>
+            <Link href="/history/" className="btn-about">Read More About Us</Link>
           </div>
-          <div style={{ position: "relative", aspectRatio: "748 / 921", maxWidth: 520, width: "100%", justifySelf: "center" }}>
-            <Image src={`${U}/about-collage.png`} alt="Oregon waterfalls and coastline" fill sizes="(max-width: 860px) 100vw, 520px" />
+          <div className="collage">
+            <Image src={`${U}/about-collage.png`} alt="Oregon waterfalls and coastline" fill sizes="(max-width: 767px) 100vw, 620px" />
           </div>
         </div>
       </section>
 
       {/* EXPLORE BY INTEREST */}
-      <section className="section">
+      <section className="section interest-section">
         <div className="container">
-          <Carousel title="Explore Oregon by Interest" itemWidth="min(260px, 75vw)">
+          <Carousel title="Explore Oregon by Interest" itemWidth="min(382px, 82vw)">
             {interests.map((c) => (
-              <Link key={c.slug} href={`/county-categories/${c.slug}/`} className="interest-card">
-                <Photo src={c.image} alt={c.alt} sizes="260px" />
-                <span>
-                  {c.name}
-                  <small style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12 }}>{c.count} places</small>
-                </span>
+              <Link key={c.slug} href={`/county-categories/${c.slug}/`} className="flip-card" aria-label={`${c.name}: ${c.count} places`}>
+                {/* front: photo only; back slides up on hover (Elementor "slide up" flip box) */}
+                <div className="front">
+                  <Photo src={c.image} alt={c.alt} sizes="(max-width: 767px) 82vw, 382px" />
+                </div>
+                <div className="back">
+                  <h3>{c.name}</h3>
+                  <p>
+                    {c.count} places across {c.counties} {c.counties === 1 ? "county" : "counties"} in Oregon. Explore
+                    every {c.name.toLowerCase()} spot by county.
+                  </p>
+                </div>
               </Link>
             ))}
           </Carousel>
@@ -119,24 +133,26 @@ export default function Home() {
       </section>
 
       {/* FEATURED */}
-      <section className="section bg-section">
+      <section className="section bg-section pad-70">
         <Image src={`${U}/featured-bg.png`} alt="" fill sizes="100vw" className="bg" />
         <div className="container">
-          <Carousel title="Featured County" itemWidth="min(560px, 85vw)">
+          <Carousel title="Featured County" itemWidth="min(calc((100% - 20px) / 2), 88vw)">
             {featured.map((a) => (
               <div key={a.slug} className="featured-card">
-                <Photo src={a.banner!.src} alt={a.banner!.alt} sizes="560px" />
+                <Photo src={a.banner!.src} alt={a.banner!.alt} sizes="(max-width: 767px) 88vw, 620px" style={{ zIndex: -1 }} />
                 <div className="body">
                   <div className="badge">
-                    <Image src={getCounty(a.counties[0])?.logo || assets.countyBadge} alt="" fill sizes="64px" />
+                    <Image src={getCounty(a.counties[0])?.logo || assets.countyBadge} alt="" fill sizes="90px" />
                   </div>
-                  <div>
-                    <h3>{a.title}</h3>
-                    <p>{a.excerpt}</p>
+                  <div className="row">
+                    <div>
+                      <h3>{a.title}</h3>
+                      <p>{a.excerpt}</p>
+                    </div>
+                    <Link href={`/county/${a.slug}/`} className="btn btn-green btn-sm">
+                      Explore More
+                    </Link>
                   </div>
-                  <Link href={`/county/${a.slug}/`} className="btn btn-green" style={{ fontSize: 12, padding: "8px 16px" }}>
-                    Explore More
-                  </Link>
                 </div>
               </div>
             ))}
@@ -145,17 +161,19 @@ export default function Home() {
       </section>
 
       {/* EXPLORE COUNTY */}
-      <section className="section">
+      <section className="section pad-70">
         <div className="container">
-          <Carousel title="Explore Oregon County" itemWidth="180px">
+          <Carousel title="Explore Oregon County" itemWidth="min(calc((100% - 120px) / 7), 60vw)">
             {countiesWithCounts.map((c) => (
               <Link key={c.slug} href={`/county-tags/${c.slug}/`} className="pill-card">
-                {c.cardImage && <Image src={c.cardImage} alt="" fill sizes="180px" style={{ objectFit: "cover" }} />}
-                <div className="badge">
-                  <Image src={c.logo || assets.countyBadge} alt="" fill sizes="64px" />
+                <Photo src={c.cardImage} alt="" sizes="200px" />
+                <div className="pill-body">
+                  <div className="badge">
+                    <Image src={c.logo || assets.countyBadge} alt="" fill sizes="74px" />
+                  </div>
+                  <span className="count">{c.count} Places</span>
+                  <strong>{c.name.replace(/ County$/, "")}</strong>
                 </div>
-                <span className="count">{c.count} Places</span>
-                <strong>{c.name.replace(/ County$/, "")}</strong>
               </Link>
             ))}
           </Carousel>
@@ -164,10 +182,10 @@ export default function Home() {
 
       {/* MERCH */}
       {products.length > 0 && (
-        <section className="section bg-section" style={{ background: "#1565d8" }}>
+        <section className="section bg-section merch-section" style={{ background: "#1565d8" }}>
           <Image src={`${U}/merch-bg.png`} alt="" fill sizes="100vw" className="bg" />
           <div className="container">
-            <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(300px, 80vw)" dark>
+            <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(calc((100% - 120px) / 3), 82vw)" gap="10px" dark>
               {products.map((p) => (
                 <Link key={p.slug} href={`/product/${p.slug}/`} className="product-card">
                   <div className="img">
