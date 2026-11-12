@@ -1,12 +1,27 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, Heebo, Roboto } from "next/font/google";
+import localFont from "next/font/local";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-const bebas = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas", display: "swap" });
-const heebo = Heebo({ subsets: ["latin"], variable: "--font-heebo", display: "swap" });
-const roboto = Roboto({ weight: ["400", "500"], subsets: ["latin"], variable: "--font-roboto-var", display: "swap" });
+const bebas = localFont({
+  src: "./fonts/bebas-neue/BebasNeue-Regular.ttf",
+  weight: "400",
+  variable: "--font-bebas",
+  display: "swap",
+});
+const heebo = localFont({
+  src: "./fonts/heebo/Heebo-Variable.ttf",
+  weight: "100 900",
+  variable: "--font-heebo",
+  display: "swap",
+});
+const roboto = localFont({
+  src: "./fonts/roboto/Roboto-Variable.ttf",
+  weight: "100 900",
+  variable: "--font-roboto-var",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"),
