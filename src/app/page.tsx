@@ -136,7 +136,7 @@ export default function Home() {
       <section className="section bg-section pad-70">
         <Image src={`${U}/featured-bg.png`} alt="" fill sizes="100vw" className="bg" />
         <div className="container">
-          <Carousel title="Featured County" itemWidth="min(calc((100% - 20px) / 2), 88vw)">
+          <Carousel title="Featured County" itemWidth="min(calc((100% - 20px) / 2), 88vw)" arrowInset="160px" lightArrows arrowStyle="chevron">
             {featured.map((a) => (
               <div key={a.slug} className="featured-card">
                 <Photo src={a.banner!.src} alt={a.banner!.alt} sizes="(max-width: 767px) 88vw, 620px" style={{ zIndex: -1 }} />
@@ -185,7 +185,7 @@ export default function Home() {
         <section className="section bg-section merch-section" style={{ background: "#1565d8" }}>
           <Image src={`${U}/merch-bg.png`} alt="" fill sizes="100vw" className="bg" />
           <div className="container">
-            <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(calc((100% - 120px) / 3), 82vw)" gap="10px" dark>
+            <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(calc((100% - 120px) / 3), 82vw)" gap="10px" dark arrowInset="60px">
               {products.map((p) => (
                 <Link key={p.slug} href={`/product/${p.slug}/`} className="product-card">
                   <div className="img">

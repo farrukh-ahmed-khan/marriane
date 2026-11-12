@@ -370,25 +370,52 @@ p {
 }
 .carousel-arrows {
   display: flex;
-  gap: 10px;
+  gap: 21px;
   flex: 0 0 auto;
+  margin-right: var(--arrow-inset, 0px);
 }
 .carousel-arrows button {
-  width: 46px;
-  height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 12px;
   border-radius: 50px;
   border: 0;
   background: transparent;
-  color: inherit;
-  font-size: 20px;
+  color: #c3cccc;
   cursor: pointer;
-  opacity: 0.55;
-  transition: background 0.2s, opacity 0.2s, color 0.2s;
+  transition: background-color 0.25s, color 0.25s;
 }
-.carousel-arrows button:hover {
-  opacity: 1;
+.carousel-arrows svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+.carousel-arrows button:hover,
+.carousel-arrows button:focus-visible {
+  background: var(--teal);
+  color: #fff;
+}
+.carousel-light-arrows .carousel-arrows button {
+  color: rgba(238, 238, 238, 0.9);
+}
+.carousel-light-arrows .carousel-arrows button:hover,
+.carousel-light-arrows .carousel-arrows button:focus-visible {
   background: #fff;
   color: var(--teal);
+}
+@media (max-width: 1024px) {
+  .carousel-arrows {
+    margin-right: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-arrows button {
+    transition: none;
+  }
 }
 .carousel-track {
   display: grid;
