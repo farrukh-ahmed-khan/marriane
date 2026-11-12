@@ -39,7 +39,7 @@ export default function Header() {
           </ul>
         </nav>
         <Link href="/" className="logo" aria-label="Oregon County Capers home">
-          <Image src={assets.logo} alt="Oregon County Capers" fill sizes="104px" priority />
+          <Image src={assets.logo} alt="Oregon County Capers" fill sizes="(max-width: 1024px) 80px, 140px" style={{ objectFit: "contain" }} priority />
         </Link>
         <div className="actions">
           <Link href="/county/" aria-label="Search attractions">

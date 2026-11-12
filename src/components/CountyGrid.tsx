@@ -16,11 +16,9 @@ export function SearchIcon() {
 export default function CountyGrid({
   counties,
   title,
-  counts,
 }: {
   counties: County[];
   title: string;
-  counts?: Record<string, number>;
 }) {
   const [sort, setSort] = useState("default");
   const [query, setQuery] = useState("");
@@ -51,7 +49,7 @@ export default function CountyGrid({
       {list.length ? (
         <div className="grid grid-5">
           {list.map((c) => (
-            <CountyCard key={c.slug} c={c} count={counts?.[c.slug]} />
+            <CountyCard key={c.slug} c={c} />
           ))}
         </div>
       ) : (

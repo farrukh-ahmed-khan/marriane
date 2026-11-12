@@ -155,7 +155,7 @@ p {
   display: grid;
   grid-template-columns: 1fr 18% 1fr;
   align-items: center;
-  padding: 10px 30px;
+  padding: 20px 40px;
 }
 .site-header nav ul {
   display: flex;
@@ -163,7 +163,7 @@ p {
   list-style: none;
   margin: 0;
   padding: 0;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
 }
 .site-header nav a {
@@ -188,8 +188,8 @@ p {
 }
 .site-header .logo {
   justify-self: center;
-  width: 104px;
-  height: 104px;
+  width: 140px;
+  height: 140px;
   position: relative;
 }
 .site-header .actions {
@@ -1103,6 +1103,50 @@ p {
 .listing-sky {
   background: var(--sky);
 }
+.counties-listing > .container {
+  max-width: 1520px;
+}
+.counties-listing .toolbar {
+  align-items: center;
+  padding: 10px;
+}
+.counties-listing .toolbar h2 {
+  font-weight: 500;
+  line-height: 1;
+}
+.counties-listing .trail {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.counties-listing .controls {
+  gap: 20px;
+}
+.counties-listing .controls select {
+  width: 246px;
+  height: 46px;
+  font-size: 16px;
+  padding: 8px 16px;
+}
+.counties-listing .search-field {
+  width: 280px;
+  min-width: 0;
+}
+.counties-listing .search-field input {
+  font-size: 16px;
+  width: 100%;
+}
+.counties-listing .search-field svg {
+  width: 26px;
+  height: 26px;
+  margin: 0 18px;
+}
+@media (max-width: 767px) {
+  .counties-listing .controls select,
+  .counties-listing .search-field {
+    width: 100%;
+    max-width: none;
+  }
+}
 .toolbar {
   display: flex;
   justify-content: space-between;
@@ -1200,7 +1244,7 @@ p {
   gap: 5px;
   background: #fff;
   border-radius: 10px;
-  padding: 15px 15px 20px;
+  padding: 15px;
   box-shadow: 0 2.06px 12.36px rgba(13, 58, 72, 0.11);
   transition: box-shadow 0.3s;
   text-align: center;
@@ -1223,12 +1267,13 @@ p {
   color: #808080;
   font-family: var(--font-display);
   font-size: 14px;
-  line-height: 1.3;
+  line-height: 1.5;
   padding: 3px 8px;
+  margin-inline: 2px;
   border-radius: 4px;
   transition: color 0.2s;
 }
-.county-card:hover .tag {
+.county-card .tag:hover {
   color: var(--green);
 }
 .county-card .badge {
@@ -1236,20 +1281,12 @@ p {
   width: 32%;
   aspect-ratio: 1;
   margin: -50px auto 0;
-  border-radius: 50%;
-  overflow: hidden;
-  background: #fff;
   z-index: 1;
 }
 .county-card h3 {
   font-size: 25px;
   margin: 0;
-  line-height: 1.1;
-}
-.county-card .count-note {
-  margin: 0;
-  font-size: 13px;
-  color: var(--text);
+  line-height: 1.5;
 }
 @media (max-width: 767px) {
   .county-card .img {

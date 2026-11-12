@@ -73,18 +73,17 @@ export function AttractionTile({ a }: { a: AttractionCard }) {
 }
 
 /** County card (counties archive). */
-export function CountyCard({ c, count }: { c: County; count?: number }) {
+export function CountyCard({ c }: { c: County }) {
   return (
     <Link href={`/county-tags/${c.slug}/`} className="county-card">
+      <span className="tag">{c.name}</span>
       <div className="img">
-        <span className="tag">{c.name}</span>
-        <Photo src={c.cardImage || c.heroImage} alt={c.name} sizes="(max-width: 767px) 50vw, 240px" />
+        <Photo src={c.cardImage || c.heroImage} alt={c.name} sizes="(max-width: 767px) 50vw, (max-width: 1024px) 33vw, 254px" />
       </div>
       <div className="badge">
         <Photo src={c.logo || assets.countyBadge} alt="" sizes="80px" style={{ objectFit: "contain" }} />
       </div>
       <h3>{c.name}</h3>
-      {count !== undefined && <p className="count-note">{count ? `${count} places` : "Coming soon"}</p>}
     </Link>
   );
 }
