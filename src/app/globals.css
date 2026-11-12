@@ -1401,6 +1401,27 @@ p {
   color: var(--text);
   font-size: 12px;
 }
+@media (min-width: 768px) {
+  .sidebar .filter-panel {
+    position: sticky;
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100vh - 40px);
+    max-height: calc(100dvh - 40px);
+  }
+  .filter-panel .filter-list {
+    min-height: 0;
+    overflow-y: auto;
+  }
+  .filter-panel h2,
+  .filter-panel .clear-btn {
+    flex-shrink: 0;
+  }
+  .filter-panel .clear-btn {
+    align-self: flex-start;
+  }
+}
 .clear-btn {
   margin-top: 10px;
   background: none;

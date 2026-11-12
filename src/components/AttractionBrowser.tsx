@@ -71,7 +71,7 @@ export default function AttractionBrowser({
           />
         </div>
         {filters.length > 1 && (
-          <div className="box">
+          <div className="box filter-panel">
             <h2>{filterTitle}</h2>
             <ul className="filter-list">
               {filters.map((c) => (
