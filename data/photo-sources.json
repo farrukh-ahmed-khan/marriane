@@ -6598,5 +6598,1205 @@
  },
  "https://cdn.recreation.gov/public/2019/04/17/16/58/272093_e123a3f3-b369-4adc-a376-484e43fd3ef1_700.webp": {
   "path": "/images/attractions/hood-river-county/sherwood-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/04/17/16/59/272093_59c90358-f4fa-4588-a730-d5eaf6f087ee_1440.webp": {
+  "path": "/images/attractions/hood-river-county/sherwood-campground-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/North%20Fork%20Campground%20site-02.webp?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/84090_700.webp": {
+  "path": "/images/attractions/hood-river-county/sherwood-campground-3.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Creek%20at%20Union%20Creek%20Campground..webp?h=c960be6b": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2018/12/10/18/42/3119_44ea1534-3ffd-46b4-821e-c01d01f388f5_700.webp": {
+  "path": "/images/attractions/jackson-county/cascade-siskiyou-national-monument-1.webp"
+ },
+ "https://static.wixstatic.com/media/75ae04_42dd3175fb0c4088afc627fd28f074b9~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/07/Rabbit-Ears-The-Two-Peaks-600x450.jpeg": {
+  "path": "/images/attractions/jackson-county/rabbit-ears-2.webp"
+ },
+ "https://cooperspur.com/wp-content/uploads/2022/03/cabin-2-exterior-winter-lodging.jpg": {
+  "path": "/images/attractions/hood-river-county/cooper-spur-mountain-resort-3.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Union%20Creek%20Campground%20shelter..webp?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://static.wixstatic.com/media/75ae04_2d5d134f620f4b2fa1b28d226c16d11e~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/07/Rabbit-Ears-1.jpeg": {
+  "path": "/images/attractions/jackson-county/rabbit-ears-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2024/01/02/20/55/60ab6c40-e36a-4038-96ef-22e426d55463.jpeg": {
+  "path": "/images/attractions/jackson-county/cascade-siskiyou-national-monument-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/07/Rabbit-Ears-Hershberger-Lookout-600x450.jpeg": {
+  "path": "/images/attractions/jackson-county/rabbit-ears-3.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/FS-RRS-WhiskeySprings-00.webp?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Union%20Creek%20Campground%20trail%20bridge..webp?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/74828_700.webp": {
+  "path": "/images/attractions/jackson-county/sky-lakes-wilderness-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2026/07/08/22/52/3119_f96694c5-0ac8-4869-be19-70526b00e4b8.jpeg": {
+  "path": "/images/attractions/jackson-county/cascade-siskiyou-national-monument-3.webp"
+ },
+ "https://cdn.recreation.gov/public/2018/10/03/16/53/250031_865de660-f247-4c46-80cb-8b88a2633de3_700.webp": {
+  "path": "/images/attractions/jackson-county/hyatt-lake-recreation-area-2.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/elk_creek.jpg?h=3ec75680&itok=nu1D-c_u": {
+  "path": "/images/attractions/jackson-county/elk-creek-jackson-1.webp"
+ },
+ "https://www.southernoregon.org/wp-content/uploads/2022/06/TO_FoodTrails_Rogue-Valley_deepBlue.png": {
+  "path": "/images/attractions/jackson-county/rogue-valley-food-trail-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2018/10/03/16/57/250031_697fce11-5697-4886-8494-2f70b0bcc2d4_700.webp": {
+  "path": "/images/attractions/jackson-county/hyatt-lake-recreation-area-3.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/FS-RRS-WhiskeySprings-02.webp?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/jenny_creek.jpg?h=f9254eb8&itok=Blp93sjG": {
+  "path": "/images/attractions/jackson-county/jenny-creek-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/07/01/22/119240_0fde9554-a47e-4c4c-9c76-04ab85d63f27_700.webp": {
+  "path": "/images/attractions/jackson-county/doe-point-campground-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/spring_creek.jpg?h=4bc1f2a4&itok=wpV5N9Tw": {
+  "path": "/images/attractions/jackson-county/spring-creek-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Snowy%20Mt%20McLoughlin_Serge%20Jerdes.JPG?h=b61ff3be": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/rogue-siskiyou/Mt.%20Ashland.jpg?h=2075fdba": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2019/03/07/01/22/119240_f4cfacb8-f392-4315-9f30-8d1652e6144b_700.webp": {
+  "path": "/images/attractions/jackson-county/doe-point-campground-2.webp"
+ },
+ "https://oregon.com/sites/default/files/lost_creek300.jpg": {
+  "path": "/images/attractions/jackson-county/lost-creek-covered-bridge-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/rogue-siskiyou/Mt%20Ashland%20Lodge%20UPDATED%202019.jpg?h=6a0fdbc4": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2018/09/11/22/07/234103_5d276023-5626-45ef-8daf-3d0305134346_1440.webp": {
+  "path": "/images/attractions/jackson-county/willow-prairie-horse-campground-1.webp"
+ },
+ "https://oregon.com/sites/default/files/antelope300.jpg": {
+  "path": "/images/attractions/jackson-county/antelope-creek-covered-bridge-1.webp"
+ },
+ "https://oregon.com/sites/default/files/mckee300.jpg": {
+  "path": "/images/attractions/jackson-county/mckee-covered-bridge-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/71749_1440.webp": {
+  "path": "/images/attractions/jackson-county/willow-prairie-horse-campground-2.webp"
+ },
+ "https://livingnewdeal.org/wp-content/uploads/2022/06/Screen-Shot-2022-06-12-at-4.03.02-PM.png": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/07/Rabbit-Ears-Natural-Bridge-600x450.jpeg": {
+  "path": "/images/attractions/jackson-county/natural-bridge-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2021/12/14/14/16/10162103_cebacdc7-9bce-4ebd-be1e-679e59dd3812.jpeg": {
+  "path": "/images/attractions/jackson-county/buck-prairie-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/07/Rabbit-Ears-Rogue-Gorge-600x450.jpeg": {
+  "path": "/images/attractions/jackson-county/rogue-gorge-viewpoint-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2021/12/14/14/18/10162103_7947829c-43dd-4a52-a9fd-6bd5d87eedb0.jpeg": {
+  "path": "/images/attractions/jackson-county/buck-prairie-2.webp"
+ },
+ "https://www.mtashland.com/wp-content/uploads/2025/04/Website-Hero-Images-7-scaled.jpg": {
+  "path": "/images/attractions/jackson-county/mt-ashland-ski-area-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/06/03/17/14/251546_0253c22e-d9ee-4468-8f73-57cedaac29ee_1440.webp": {
+  "path": "/images/attractions/jackson-county/acorn-woman-squaw-peak-lookout-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/06/03/17/44/251546_4545b314-7cbf-4b35-a8c7-1fc05fa948af_700.webp": {
+  "path": "/images/attractions/jackson-county/acorn-woman-squaw-peak-lookout-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/06/03/17/25/251546_3e5882cd-e06f-4b54-8d2d-f7716f818d56_700.webp": {
+  "path": "/images/attractions/jackson-county/acorn-woman-squaw-peak-lookout-3.webp"
+ },
+ "https://cdn.recreation.gov/public/2023/04/12/15/50/f03aee76-bf5f-407d-8076-be564ebf5f4c.jpeg": {
+  "path": "/images/attractions/jackson-county/elderberry-flat-campground-2.webp"
+ },
+ "https://lithiaspringsresort.com/wp-content/uploads/2021/07/Copy-of-10-scaled.jpg": {
+  "path": "/images/attractions/jackson-county/lithia-springs-resort-1.webp"
+ },
+ "https://cdn.calderabrewing.com/wp-content/uploads/2026/03/Fred.jpg": {
+  "path": "/images/attractions/jackson-county/caldera-2.webp"
+ },
+ "https://walkaboutbrewing.com/cdn/shop/files/DSC07089.jpg?v=1670012200": {
+  "path": "/images/attractions/jackson-county/walkabout-brewing-company-1.webp"
+ },
+ "https://walkaboutbrewing.com/cdn/shop/files/DSC7004_1.jpg?v=1670019480": {
+  "path": "/images/attractions/jackson-county/walkabout-brewing-company-2.webp"
+ },
+ "https://www.dancin.com/wp-content/uploads/2025/03/38913SLIDE_6-1024x627.jpg": {
+  "path": "/images/attractions/jackson-county/dancin-vineyards-1.webp"
+ },
+ "https://fermentnfire.com/wp-content/uploads/2025/07/Ferment_and_Fire-1020_LR-400x284.jpg": {
+  "path": "/images/attractions/jackson-county/ferment-and-fire-restaurant-and-brewery-1.webp"
+ },
+ "https://hummingbirdestate.com/wp-content/uploads/2025/06/Inn-Cottage.jpg": {
+  "path": "/images/attractions/jackson-county/hummingbird-estate-1.webp"
+ },
+ "https://www.dancin.com/wp-content/uploads/2025/03/32259rPNFWC3CQzqFzrPRGcos_Vineyard.5.jpg": {
+  "path": "/images/attractions/jackson-county/dancin-vineyards-2.webp"
+ },
+ "https://therrrink.com/wp-content/uploads/2024/09/DSC_0090.jpg": {
+  "path": "/images/attractions/jackson-county/the-rrrink-1.webp"
+ },
+ "https://irvinerobertsvineyards.com/wp-content/uploads/2022/01/20013-Irvine-_-Roberts-D-7003.jpg": {
+  "path": "/images/attractions/jackson-county/irvine-and-roberts-vineyards-1.webp"
+ },
+ "https://staveandstone.com/wp-content/uploads/2022/05/DSC00524.jpg": {
+  "path": "/images/attractions/hood-river-county/stave-and-stone-winery-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/6993c23f1f17220380a758a8/69f595d9-41de-4637-b799-8df0ed7c0c84/John+Valls_QuadyNorth_0009.jpg": {
+  "path": "/images/attractions/jackson-county/quady-north-1.webp"
+ },
+ "https://hummingbirdestate.com/wp-content/uploads/2025/06/Join-Our-Club-1.jpg": {
+  "path": "/images/attractions/jackson-county/hummingbird-estate-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/56f57a9659827e9edf9787ea/46e00ceb-0250-4c5e-96fb-357e1bc30616/2025+Troon+label+line+up.jpg": {
+  "path": "/images/attractions/jackson-county/troon-vineyards-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/682b33836889f96718fb74a9/1747661724691-N5EIH6Q4XKOEKRTBOBAX/wi_vineyard_pattern_01.jpg": {
+  "path": "/images/attractions/jackson-county/weisinger-family-winery-1.webp"
+ },
+ "https://static.wixstatic.com/media/75ae04_3d28b23779af467ab553774128d062ba~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://static.wixstatic.com/media/ec5b30_b2bc05ff5da549d3a83b1fa95e22f0bc~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://images.squarespace-cdn.com/content/v1/6993c23f1f17220380a758a8/da4317e0-2be5-42b3-b335-98e572b60f13/IMG_2690.jpg": {
+  "path": "/images/attractions/jackson-county/quady-north-2.webp"
+ },
+ "https://www.krisellecellars.com/assets/images/pods/clients/reds_header.jpg": {
+  "path": "/images/attractions/jackson-county/kriselle-cellars-1.webp"
+ },
+ "https://www.triumwines.com/wp-content/uploads/2025/06/pinot_blanc_best-in-show-scaled.jpg": {
+  "path": "/images/attractions/jackson-county/trium-wines-1.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/2137fbed45596724d8095c7c9e6e6d49_m_fmOg5UeAf0kJrRcwzgPX2BmrCW0Q.jpg": {
+  "path": "/images/attractions/jackson-county/southern-oregon-university-1.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/12fc6252f3c812dc1b4d62e70bbc8564_m_IMG_3210.jpg": {
+  "path": "/images/attractions/jackson-county/the-cove-emigrant-lake-1.webp"
+ },
+ "https://museum.warmsprings-nsn.gov/wp-content/uploads/2019/02/WSM_entrance_stonewallTWANATB-1024x655.jpg": {
+  "path": "/images/attractions/jefferson-county/the-museum-at-warm-springs-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/11/21/23/42/10005676_2ac9d822-8d48-4ad0-b43a-bdd9801b061e_700.jpeg": {
+  "path": "/images/attractions/jefferson-county/mecca-flat-campground-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/69cd95a50ee4f57c795d7e73/ba3b906b-b4a8-4143-bc0d-5b731217f6c4/IMG_5798.JPG": {
+  "path": "/images/attractions/jefferson-county/erickson-aircraft-collection-2.webp"
+ },
+ "https://museum.warmsprings-nsn.gov/wp-content/uploads/2018/10/Museum-Photos-011315-II-034.jpg": {
+  "path": "/images/attractions/jefferson-county/the-museum-at-warm-springs-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/02/07/22/48/274478_e5a8cfe4-3c86-41f8-9c9d-2b28a9f0dcea_700.jpeg": {
+  "path": "/images/attractions/jefferson-county/trout-creek-campground-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/f0212a1a2ae399d9849e9e4a6e9bcfa6_tmptmphuyy8T": {
+  "path": "/images/attractions/jefferson-county/the-cove-palisades-state-park-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/11/21/23/39/10005676_fe3bf349-c792-436b-a0d4-95886c1b7659_1440.jpeg": {
+  "path": "/images/attractions/jefferson-county/mecca-flat-campground-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/59f5284cc8d3bf957a9ab1a5d7a9fc4e_tmptmpcyTk06": {
+  "path": "/images/attractions/jefferson-county/the-cove-palisades-state-park-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/69cd95a50ee4f57c795d7e73/79021e1c-e5c9-4e24-9bd3-9e04ff5bdf10/eac%2Bflag.png": {
+  "path": "/images/attractions/jefferson-county/erickson-aircraft-collection-1.webp"
+ },
+ "https://www.naumescf.com/wp-content/uploads/2023/08/i-x6zNBzL-X3-1536x1025.jpg": {
+  "path": "/images/attractions/jackson-county/naumes-crush-and-fermentation-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/4820b74a18194c92534e19505b7087bb_tmptmpHQUZp4": {
+  "path": "/images/attractions/jefferson-county/the-cove-palisades-state-park-3.webp"
+ },
+ "https://cdn.recreation.gov/public/images/76892_1440.webp": {
+  "path": "/images/attractions/jefferson-county/allen-springs-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/04/06/23/23/251577_dedcb50f-6916-4944-adce-807d604aaef0_1440.webp": {
+  "path": "/images/attractions/jefferson-county/allen-springs-campground-2.webp"
+ },
+ "https://cdn.calderabrewing.com/wp-content/uploads/2026/09/caldera-building-1200-1200x628.jpg": {
+  "error": "fetch failed"
+ },
+ "https://www.naumescf.com/wp-content/uploads/2024/04/Dustin_Andries_2559x1708-1536x1025.jpg": {
+  "path": "/images/attractions/jackson-county/naumes-crush-and-fermentation-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/mthood/image/Peninsula%20dock.JPG?h=19ad3fdd": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/mthood/image/Peninsula%20CG.JPG?h=a1f22d6b": {
+  "error": "HTTP 403"
+ },
+ "https://commonblockbrewing.com/wp-content/uploads/2023/01/UntappedMedia_CommonBlock-food-drink_0C4A0002_lo-Large.jpeg": {
+  "path": "/images/attractions/jackson-county/common-block-brewing-company-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2021/08/12/21/19/267075_48c28a7d-883d-48a2-bd9e-5671d414eeca_700.webp": {
+  "path": "/images/attractions/jefferson-county/allingham-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2021/08/12/21/18/267075_0099668a-980a-4434-a989-417f4d7f655c_1440.webp": {
+  "path": "/images/attractions/jefferson-county/allingham-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66644_700.webp": {
+  "path": "/images/attractions/jefferson-county/blue-bay-campground-1.webp"
+ },
+ "https://images.ctfassets.net/416ywc1laqmd/7I5krhyIh8o9p8hCfcznIW/591c17b3be82f32cac34a74729f10969/p_balancing_rocks_overlook.jpg": {
+  "path": "/images/attractions/jefferson-county/balancing-rocks-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66676_700.webp": {
+  "path": "/images/attractions/jefferson-county/blue-bay-campground-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/02/Experimental-Rattlesnake-POI-23-600x450.jpg": {
+  "path": "/images/attractions/jefferson-county/mount-jefferson-1.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/Billy_Chinook_Falls_993.jpg": {
+  "path": "/images/attractions/jefferson-county/billy-chinook-falls-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68400_700.webp": {
+  "path": "/images/attractions/jefferson-county/camp-sherman-campground-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2015/04/Billys-Play-Ground-9-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/billys-playground-1.webp"
+ },
+ "https://images.ctfassets.net/416ywc1laqmd/HKdcYazkDwF9Kx7FcI2IG/54d02c5478f24e11783026d961b6a51c/gallery_balancing_rocks1.jpg": {
+  "path": "/images/attractions/jefferson-county/balancing-rocks-2.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2023-07/metolius_river.jpg?h=4e2ca52f&itok=-_4-OVpY": {
+  "path": "/images/attractions/jefferson-county/metolius-river-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68405_700.webp": {
+  "path": "/images/attractions/jefferson-county/camp-sherman-campground-2.webp"
+ },
+ "https://cycleoregon.com/wp-content/uploads/2022/10/Madras-Mountain-Views.png": {
+  "path": "/images/attractions/jefferson-county/madras-mountain-views-scenic-bikeway-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/11/21/22/267080_5ed8cc05-3aa4-41c5-b660-7836fe6a2bb3_1440.webp": {
+  "path": "/images/attractions/jefferson-county/candle-creek-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83415_1440.webp": {
+  "path": "/images/attractions/jefferson-county/candle-creek-campground-2.webp"
+ },
+ "https://www.maragaswinery.com/uploads/1/4/3/7/143742004/published/tast-drink-apps-bttls-wed-sun-swirling-wine-a-web-600.jpg?1783738995": {
+  "path": "/images/attractions/jefferson-county/maragas-winery-1.webp"
+ },
+ "https://www.americasstateparks.org/wp-content/uploads/peter-skene-ogden-state-scenic-viewpoint-commons.webp": {
+  "path": "/images/attractions/jefferson-county/peter-skene-ogden-state-scenic-viewpoint-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/14/16/20/267083_846d77aa-e6c5-4fec-bd91-4e89a5bd8f9f_1440.webp": {
+  "path": "/images/attractions/jefferson-county/gorge-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83567_1440.webp": {
+  "path": "/images/attractions/jefferson-county/gorge-campground-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/a7f4e1702f84af58b612472d62c651fd_m_IMG_1388.jpg": {
+  "path": "/images/attractions/jefferson-county/eagles-nest-dgc-1.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/7b9892922c490b06ae872734ac0a8c81_m_IMG_2584.jpg": {
+  "path": "/images/attractions/jefferson-county/coyotes-den-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/74431_700.webp": {
+  "path": "/images/attractions/jefferson-county/haystack-reservoir-campground-and-day-use-area-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/10/Donnybrook-1.jpeg": {
+  "path": "/images/attractions/jefferson-county/donnybrook-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2015/04/Screenshot-2023-03-27-at-8.29.18-AM-600x348.png": {
+  "path": "/images/attractions/jefferson-county/billys-playground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/74545_700.webp": {
+  "path": "/images/attractions/jefferson-county/haystack-reservoir-campground-and-day-use-area-3.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/07/13/19/31/234779_8f71e72d-8853-42f6-b58a-71504565604a_1440.webp": {
+  "path": "/images/attractions/jefferson-county/haystack-reservoir-campground-and-day-use-area-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/10/Donnybrook-Priday-Ranch-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/donnybrook-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/d2f2c4db63c6be9bf6079dfd1fc31bea_m_IMG_0498.jpg": {
+  "path": "/images/attractions/jefferson-county/juniper-hills-park-1.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/2D6F089A-EA59-3EBD-76E36A701B6D8F91.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/josephine-county/oregon-caves-national-monument-and-preserve-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/14/20/59/266142_01e44c29-ae40-474d-bfed-6d524d89f70f_1440.webp": {
+  "path": "/images/attractions/jefferson-county/jack-creek-campground-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/02/Experimental-Rattlesnake-2-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/experimental-rattlesnake-1.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/4372CFA7-A075-F5CE-F3A8B54DA0DD6A42.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/josephine-county/oregon-caves-national-monument-and-preserve-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/02/11/23/58/232788_988fa4d4-3942-407b-867f-cbfdcfcc9545_700.webp": {
+  "path": "/images/attractions/jefferson-county/link-creek-campground-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/979fce96a0a9f6478527423f57bec321_tmptmpL1S4dc": {
+  "path": "/images/attractions/josephine-county/golden-state-heritage-site-1.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/3C850A42-1DD8-B71B-0B1597D0AFDDF25F.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/josephine-county/oregon-caves-national-monument-and-preserve-3.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/05/Town-of-Ashwood-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/ghost-of-ashwood-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/05/Ghost-of-Ashwood-1.jpeg": {
+  "path": "/images/attractions/jefferson-county/ghost-of-ashwood-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Red%20Buttes%20Wilderness%20Trail_Photo%20courtesy%20of%20Katie%20Younkin%20and%20used%20with%20permission.png?h=c8e26878": {
+  "error": "HTTP 403"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/de1104c794cc568b9cf22bfcdac36393_tmptmpybqBDh": {
+  "path": "/images/attractions/josephine-county/golden-state-heritage-site-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66761_1440.webp": {
+  "path": "/images/attractions/jefferson-county/link-creek-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83424_1440.webp": {
+  "path": "/images/attractions/jefferson-county/jack-creek-campground-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Wild%20and%20scenic%20illinois%20river.jpg?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/05/Green-Ridge-11-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/green-ridge-lookout-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/b6fbbdba1fcaa0d21ab563e01873fbc0_tmptmpT3xGUg": {
+  "path": "/images/attractions/josephine-county/wolf-creek-inn-state-heritage-site-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/15/18/27/266139_074594d0-3c24-480f-a371-9afe24305c60_1440.webp": {
+  "path": "/images/attractions/jefferson-county/lower-bridge-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83454_1440.webp": {
+  "path": "/images/attractions/jefferson-county/lower-bridge-campground-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/d1e80669ef64b13adef2f0241b85de33_m_IMG_2167.jpg": {
+  "path": "/images/attractions/josephine-county/lake-selmac-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Bolan%20Lake%20as%20the%20seasons%20change%20on%20the%20Wild%20Rivers%20Ranger%20District_USDA%20Forest%20Service%20photo%20by%20Jonathan%20Fuller.jpg?h=d35d3c58": {
+  "error": "HTTP 403"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/silver_creek.jpg?h=727a6894&itok=qGofPq_h": {
+  "path": "/images/attractions/josephine-county/north-fork-silver-creek-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/03/15/18/28/267081_cb6c6df2-9b1f-4e9f-b108-91402845cdc6_1440.webp": {
+  "path": "/images/attractions/jefferson-county/lower-canyon-creek-campground-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-10/river_styx.jpg?h=4721ca6f&itok=ChV0CW0r": {
+  "path": "/images/attractions/josephine-county/river-styx-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/05/Green-Ridge-Updated-Route-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/green-ridge-lookout-1.webp"
+ },
+ "https://oregon.com/sites/default/files/grave_creek300.jpg": {
+  "path": "/images/attractions/josephine-county/grave-creek-covered-bridge-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/12/03/23/54/267076_fff6075c-e7b6-4e77-bafb-b4d709979371_700.webp": {
+  "path": "/images/attractions/jefferson-county/monty-campground-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2018/10/Horn-of-the-Metolius-16-1.jpeg": {
+  "path": "/images/attractions/jefferson-county/horn-of-the-metolius-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83431_1440.webp": {
+  "path": "/images/attractions/jefferson-county/lower-canyon-creek-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/04/24/16/42/234140_20f83397-d730-4f02-8ff6-9c181f95aac3_700.webp": {
+  "path": "/images/attractions/jefferson-county/perry-south-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/04/24/16/38/234140_2fef5f45-19a1-4d19-89e5-d37bea9b818e_1440.webp": {
+  "path": "/images/attractions/jefferson-county/perry-south-campground-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Grayback%20picnic%20shelter.JPG?h=7dcb60fd": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2021/08/06/15/42/267076_4d8f4203-50f0-4c5e-b09e-8532adddf72c_1440.webp": {
+  "path": "/images/attractions/jefferson-county/monty-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/75563_1440.webp": {
+  "path": "/images/attractions/jefferson-county/pioneer-ford-campground-1.webp"
+ },
+ "https://applegatevalley.wine/wp-content/uploads/2012/08/plaisance.jpg": {
+  "path": "/images/attractions/josephine-county/plaisance-ranch-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/75564_1440.webp": {
+  "path": "/images/attractions/jefferson-county/pioneer-ford-campground-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Riverbench%20site.jpg?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/10/Larch-Time-2-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/larch-time-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66753_1440.webp": {
+  "path": "/images/attractions/jefferson-county/scout-lake-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/70440_700.webp": {
+  "path": "/images/attractions/jefferson-county/sheep-springs-horse-camp-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/rogue-siskiyou/image/Sam%20brown%20horse%20camp.JPG?h=49ee2952&itok=tSj3afnZ": {
+  "error": "HTTP 403"
+ },
+ "https://static.wixstatic.com/media/6a1704_f2cc1a079f10403b80f2e9f8e17daee2f000.jpg/v1/fill/w_799,h_449,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/6a1704_f2cc1a079f10403b80f2e9f8e17daee2f000.jpg": {
+  "error": "fetch failed"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Grayback%20Creek%20bridge_USDA%20Forest%20Service%20photo%20by%20Chamise%20Kramer.JPG?h=e5806a0a": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/66778_1440.webp": {
+  "path": "/images/attractions/jefferson-county/scout-lake-campground-2.webp"
+ },
+ "https://static.wixstatic.com/media/741ccc_8ab2d05e74224ad783a01bb958bfac47~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Sam%20Brown%20Horse%20Camp%20site.JPG?h=71976bb4": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/75311_1440.webp": {
+  "path": "/images/attractions/jefferson-county/sheep-springs-horse-camp-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68412_700.webp": {
+  "path": "/images/attractions/jefferson-county/smiling-river-campground-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/03/Y-Madras-1-1536x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/lost-wagon-train-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/01/29/21/15/233197_74a84e4f-83be-4275-99e0-0f03da3d8148_1440.webp": {
+  "path": "/images/attractions/jefferson-county/smiling-river-campground-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/649c8d24ce133662eaccdefc/e380e6fa-a305-452c-9264-e1822349312e/IMG_E9731.JPG": {
+  "path": "/images/attractions/josephine-county/schmidt-family-vineyards-llc-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2018/10/Lake-Billy-Chinook-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/horn-of-the-metolius-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/Store%20Gulch%20Campsite.jpg?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/03/Abandoned-building-in-Gateway-Oregon.jpeg": {
+  "path": "/images/attractions/jefferson-county/lost-wagon-train-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/rogue-siskiyou/image/sixmile%20campsite.jpg?h=3751da6c": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/66758_1440.webp": {
+  "path": "/images/attractions/jefferson-county/south-shore-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66776_1440.webp": {
+  "path": "/images/attractions/jefferson-county/south-shore-campground-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2018/04/Over-the-Rainbow-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/over-the-rainbow-1.webp"
+ },
+ "https://solerabrewery.com/wp-content/uploads/2016/08/Mt._Hood_NEFX-P40200521.jpg": {
+  "error": "timeout"
+ },
+ "https://cdn.recreation.gov/public/images/73253_700.webp": {
+  "path": "/images/attractions/jefferson-county/green-ridge-lookout-jefferson-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/4518f4d5f5e4202c1be04316dd617cf6_m_IMG_0099.jpg": {
+  "path": "/images/attractions/josephine-county/illinois-river-forks-state-park-josephine-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/09/13/23/54/234477_9ce9087f-bdce-4046-a9c7-3a37ab5ec816_1440.webp": {
+  "path": "/images/attractions/jefferson-county/green-ridge-lookout-jefferson-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/rogue-siskiyou/image/Store%20Gulch%20GS%20ca1930s.jpg?h=ded804db&itok=7msjaSZH": {
+  "error": "HTTP 403"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/108d4fffef980f20f2ab0dd427144d22_m_IMG_5611.jpg": {
+  "path": "/images/attractions/josephine-county/indian-mary-county-park-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2018/04/Over-the-Rainbow-9-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/over-the-rainbow-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68989_1440.webp": {
+  "path": "/images/attractions/jefferson-county/olallie-lake-guard-station-cabin-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/bf1dd6fe4baa1025012d20defdb151b2_m_IMG_2295.jpg": {
+  "path": "/images/attractions/josephine-county/pacifica-dgc-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/09/Metolius-Preserve-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/metolius-preserve-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/69110_700.webp": {
+  "path": "/images/attractions/josephine-county/chinquapin-group-campground-1.webp"
+ },
+ "https://i0.wp.com/favellmuseum.org/wp-content/uploads/2018/01/arrowhead-square.png?resize=447%2C447&ssl=1": {
+  "path": "/images/attractions/klamath-county/favell-museum-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68973_1440.webp": {
+  "path": "/images/attractions/jefferson-county/olallie-lake-guard-station-cabin-1.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/60f95d40fc763a78048f0fddfa79098a_m_IMG_4503.jpg": {
+  "path": "/images/attractions/josephine-county/tom-pearce-park-1.webp"
+ },
+ "https://i0.wp.com/favellmuseum.org/wp-content/uploads/2018/01/1000xHorseNation.jpg?resize=580%2C580&ssl=1": {
+  "path": "/images/attractions/klamath-county/favell-museum-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/08/Path-of-Totality-POI-Willow-Creek-Canyon-600x450.jpg": {
+  "path": "/images/attractions/jefferson-county/path-of-totality-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/780a856b1778aba2a37748ed6cb5e0c4_m_CFaDUFxAJXNfNSnjV1EWnlo4YxZc.jpg": {
+  "path": "/images/attractions/josephine-county/riverside-park-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2017/08/Path-of-Totality-01-1600x1000.jpg": {
+  "path": "/images/attractions/jefferson-county/path-of-totality-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/69280_700.webp": {
+  "path": "/images/attractions/josephine-county/chinquapin-group-campground-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/a24705d8792abae52dbf4cf477d2a4da_m_IMG_0603.jpg": {
+  "path": "/images/attractions/josephine-county/wolf-creek-park-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2026/04/14/15/19/10386660_dc54b93d-ac8a-40c3-85c0-c60828c642fd_1440.jpg": {
+  "path": "/images/attractions/josephine-county/sam-brown-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2026/04/14/15/21/10386660_a479bb80-73a2-40ad-bfed-03d1d3e3f54e_700.jpg": {
+  "path": "/images/attractions/josephine-county/sam-brown-campground-2.webp"
+ },
+ "https://www.klamathcounty.org/ImageRepository/Path?filePath=/documents/Intranet/130/Klamath%20County%20Museum.jpg": {
+  "path": "/images/attractions/klamath-county/klamath-county-museum-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2015/03/Poke-the-Bear-12-600x600.jpg": {
+  "path": "/images/attractions/jefferson-county/poke-the-bear-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2015/03/Poke-the-Bear-1-1600x1000.jpg": {
+  "path": "/images/attractions/jefferson-county/poke-the-bear-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/01/08/19/15/1751_f02e455d-9a3f-4fb3-95cd-f085e40dea71_700.webp": {
+  "path": "/images/attractions/josephine-county/rough-and-ready-botanical-wayside-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/snowy-mountain-and-forest-fremont-winema-national-forest_35940522560_o.jpg?h=635f1197": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/klamath-marsh-national-wildlife-area-fremont-winema_25390879631_o.jpg?h=1389ae57": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2026/07/30/17/04/1162_ec4f9b38-e016-4aed-a1d5-df3de68503d9.jpeg": {
+  "path": "/images/attractions/josephine-county/galice-hellgate-back-country-byway-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2018/10/Into-the-Horn-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/saxophone-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2014/10/Shermans-Waltz-1-1472x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/shermans-hard-rock-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/797a7b279d5a6ef0d34765d25c3f6c1c_tmptmpE6DWgv": {
+  "path": "/images/attractions/klamath-county/collier-memorial-state-park-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/31447c569ea5c61cccb84c7216e14685_tmptmphhzSzc": {
+  "path": "/images/attractions/klamath-county/collier-memorial-state-park-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2026/07/30/17/04/1162_f1045b37-4949-4a45-b7bf-0f46c554de4b.jpeg": {
+  "path": "/images/attractions/josephine-county/galice-hellgate-back-country-byway-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/35d3ea7ec01669e70a7a217356584a34_tmptmpgwq7pf": {
+  "path": "/images/attractions/klamath-county/collier-memorial-state-park-3.webp"
+ },
+ "https://staveandstone.com/wp-content/uploads/2024/10/OCN01887-2.jpg": {
+  "error": "timeout"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/7bdccba6f33203fc601b19fea65c61e9_tmptmp5GjxxG": {
+  "path": "/images/attractions/klamath-county/jackson-f-kimball-state-recreation-site-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2026/07/Suttle-Wizard-1-1600x1000.jpg": {
+  "path": "/images/attractions/jefferson-county/suttle-wizard-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2025/08/04/15/31/234154_e2061ce7-14fe-438c-96f0-b9b792ee84be_1440.webp": {
+  "path": "/images/attractions/josephine-county/bolan-mountain-lookout-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/fb61cd080fe91bd88c6631d7f162408c_tmptmpyuHDD0": {
+  "path": "/images/attractions/klamath-county/oc-and-e-woods-line-state-trail-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2019/03/Big-One6-1-1600x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/the-big-one6-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2025/08/02/00/01/234154_fdc5e403-86b8-4fd2-b132-3df149f9504e_1440.webp": {
+  "path": "/images/attractions/josephine-county/bolan-mountain-lookout-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/291/53333bf80450ea51d006b2a1b1712d52_3Copy2.JPG": {
+  "path": "/images/attractions/klamath-county/jackson-f-kimball-state-recreation-site-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2019/03/Big-One6-13-600x450.jpeg": {
+  "path": "/images/attractions/jefferson-county/the-big-one6-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/5a88e27ea3dfaf2acd02e43af9a2513e_tmptmpN1e8rK": {
+  "path": "/images/attractions/klamath-county/oc-and-e-woods-line-state-trail-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/09/Bolan-Fire-Lookout-OPB.jpg": {
+  "path": "/images/attractions/josephine-county/bolan-mountain-fire-lookout-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/06/25/17/51/262728_3cd97ffb-0131-48bb-9588-72c46bb1ee9a.jpeg": {
+  "path": "/images/attractions/klamath-county/gerber-recreation-area-1.webp"
+ },
+ "https://www.odelllakeresort.com/wp-content/uploads/6010-Odell-Lake-Resort.jpg": {
+  "path": "/images/attractions/klamath-county/odell-lake-resort-and-campground-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2019/10/Met-Pres-Bonus-1-1472x1000.jpeg": {
+  "path": "/images/attractions/jefferson-county/tripple-ripple-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/01/Destination-Milkshake-POI-Lake-of-the-Woods-600x450.jpeg": {
+  "path": "/images/attractions/klamath-county/sunset-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/06/25/17/51/262728_5be02a7e-50d9-429c-a267-569e2df8a285.jpeg": {
+  "path": "/images/attractions/klamath-county/gerber-recreation-area-2.webp"
+ },
+ "https://www.odelllakeresort.com/wp-content/uploads/boat-rental-sign-9384-scaled.jpg": {
+  "path": "/images/attractions/klamath-county/odell-lake-resort-and-campground-2.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/3C7B26D3-1DD8-B71B-0B939039D597B9A3.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/klamath-county/crater-lake-national-park-2.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/3C7B227E-1DD8-B71B-0BEECDD24771C381.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/klamath-county/crater-lake-national-park-1.webp"
+ },
+ "https://static.wixstatic.com/media/741ccc_d9879cc836bb491485be639149a12ae2~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://static.wixstatic.com/media/342bd3_e4295bbd34a24b9e876647a91f378081~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://www.fws.gov/sites/default/files/styles/facebook_1200x630/public/banner_images/2021-09/0_bear_valley_ponderosa_pine.jpg?h=80b34d73&itok=0x2VWEpg": {
+  "path": "/images/attractions/klamath-county/bear-valley-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/fremont-winema/View%20towards%20summer%20lake%20from%20winter%20rim.jpg?h=c3635fa2": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/hager-mountain-fremont-winema_23849334051_o.jpg?h=1389ae57&itok=SW40gf75": {
+  "error": "HTTP 403"
+ },
+ "https://myodfw.com/sites/default/files/styles/380_max_width/public/2017-09/182_snow_geese_klamath_lederer_odfw.jpg?itok=Oy9igeoP": {
+  "path": "/images/attractions/klamath-county/klamath-wildlife-area-1.webp"
+ },
+ "https://www.fws.gov/sites/default/files/styles/facebook_1200x630/public/banner_images/2021-09/0_landscape_upper_klamath_Doug_Lester-Eagle_Ridge_7DII_20160426_0015.jpg?h=80b34d73&itok=wuITZPPj": {
+  "path": "/images/attractions/klamath-county/upper-klamath-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/big_marsh_creek.jpg?h=55763385&itok=9TUfwotr": {
+  "path": "/images/attractions/klamath-county/big-marsh-creek-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/01/Destination-Milkshake-1-1600x1000.jpeg": {
+  "path": "/images/attractions/klamath-county/destination-milkshake-1.webp"
+ },
+ "https://www.fws.gov/sites/default/files/styles/facebook_1200x630/public/banner_images/2021-10/0_landscape_klamath_marsh_2.jpg?h=7be81afc&itok=DX1QsZVr": {
+  "path": "/images/attractions/klamath-county/klamath-marsh-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/09/HighLakesBrownMountain-001-1500x1000.jpg": {
+  "path": "/images/attractions/klamath-county/high-lakes-brown-mountain-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/card_560_x_300/public/2022-09/klamath_river_oregon.jpg?h=7eabb7da&itok=KioU-uAd": {
+  "path": "/images/attractions/klamath-county/klamath-river-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/card_560_x_300/public/2022-09/little_deschutes_river.jpg?h=7a04075c&itok=ZfvFGiPp": {
+  "path": "/images/attractions/klamath-county/little-deschutes-river-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2021/05/Klamath-Marsh-2.jpeg": {
+  "path": "/images/attractions/klamath-county/klamath-marsh-klamath-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2021/05/Klamath-Marsh-1-1472x1000.jpeg": {
+  "path": "/images/attractions/klamath-county/klamath-marsh-klamath-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/sprague_river_nf.jpg?h=ddb83014&itok=vNamYPrN": {
+  "path": "/images/attractions/klamath-county/north-fork-sprague-river-1.webp"
+ },
+ "https://www.sheltercoveresort.com/wp-content/uploads/2026/10/Shelter-Cove-Winter-Resort-Entrance-e1793220249604.png": {
+  "path": "/images/attractions/klamath-county/shelter-cove-resort-and-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2023/01/19/19/50/c6a4bc65-5ca5-46d6-bed3-09f6055f4a0d.jpeg": {
+  "path": "/images/attractions/klamath-county/surveyor-recreation-site-1.webp"
+ },
+ "https://www.sheltercoveresort.com/wp-content/uploads/2026/10/Icicle-Framed-Winter-Lake-Sunset.png": {
+  "path": "/images/attractions/klamath-county/shelter-cove-resort-and-campground-1.webp"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/styles/banner_image_xs/public/2022-09/sycan_river.jpg?h=926d89e9&itok=-NlEm97X": {
+  "path": "/images/attractions/klamath-county/sycan-river-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/02/OCE-Yonna-POI-Swede-Cut-Tall-600x800.jpeg": {
+  "path": "/images/attractions/klamath-county/oc-and-e-yonna-valley-meadows-2.webp"
+ },
+ "https://traveloregon.com/wp-content/uploads/2011/09/2017SB_VolcanicLegacy_ClaytonCotterell.jpg": {
+  "path": "/images/attractions/klamath-county/volcanic-legacy-scenic-byway-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/04/OCE-Yonnna-1-1600x1000.jpeg": {
+  "path": "/images/attractions/klamath-county/oc-and-e-yonna-valley-meadows-1.webp"
+ },
+ "https://www.willamettepass.ski/wp-content/uploads/sites/13/2023/11/PC-Jessie-Perry-1-1024x683.jpg": {
+  "path": "/images/attractions/klamath-county/willamette-pass-resort-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/02/Destination-Milkshake-POI-Great-Meadow-600x450.jpeg": {
+  "path": "/images/attractions/klamath-county/great-meadows-1.webp"
+ },
+ "https://www.willamettepass.ski/wp-content/uploads/sites/13/2024/09/1.6.22-_-Skiers-on-the-Slopes-%C2%A9-Eric-Berry-3-scaled.jpg": {
+  "path": "/images/attractions/klamath-county/willamette-pass-resort-2.webp"
+ },
+ "https://cdn3.sportngin.com/attachments/text_block/7ab5-204806725/Classic-Pic-DSC00429__2___3__medium.jpg": {
+  "path": "/images/attractions/klamath-county/bill-collier-community-ice-arena-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/04/Oregon-Outback-1-1600x1000.jpg": {
+  "path": "/images/attractions/klamath-county/oregon-outback-re-imagined-1.webp"
+ },
+ "https://oregonconfluence.com/wp-content/uploads/2021/02/Phoenix-2048x1392-1-600x408.jpg": {
+  "path": "/images/attractions/klamath-county/downtown-klamath-falls-1.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/d48c85f15202c327a9b6bbc4f30a0291_m_IMG_3015.jpg": {
+  "path": "/images/attractions/klamath-county/mailn-park-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/116/c70abff39544f4c775ab9b5cf3b637d4_fortrock1.2.jpg": {
+  "path": "/images/attractions/lake-county/fort-rock-cave-near-fort-rock-state-natural-area-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/36fb5acdba4e29e834263f8a4e07d085_tmptmpisaOnv": {
+  "path": "/images/attractions/lake-county/fort-rock-homestead-village-museum-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/20260612-FS-REM-104-1.jpg?h=d9b15396&itok=6u-m023Q": {
+  "error": "HTTP 403"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/dcf1fc797ab660fe925a1736d9806002_tmptmpJIHyQ3": {
+  "path": "/images/attractions/lake-county/fort-rock-state-natural-area-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/d39833ffd72b9f9466e0c72b2da2b2bd_tmptmpptzUZS": {
+  "path": "/images/attractions/lake-county/goose-lake-state-recreation-area-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/20260612-FS-REM-0104-3.jpg?h=d9b15396": {
+  "error": "HTTP 403"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/dfe0e479e568b40d838c6e64f8566138_m_IMG_2354.jpg": {
+  "path": "/images/attractions/klamath-county/moore-park-the-attraction-1.webp"
+ },
+ "https://www.nps.gov/common/uploads/structured_data/3C7B2B97-1DD8-B71B-0B8A0028F7FBEC27.jpg?maxWidth=1200&maxHeight=800&quality=90": {
+  "path": "/images/attractions/klamath-county/crater-lake-national-park-3.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/ff11621a5ff8a768fa56839730b0bb23_m_IMG_0110.jpg": {
+  "path": "/images/attractions/klamath-county/crest-park-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/455dab4487ace558f70e65938c0fbd49_tmptmpCzvUa": {
+  "path": "/images/attractions/lake-county/goose-lake-state-recreation-area-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/fremont-winema/Chewaucan%20Crossing%20TH_bridge.jpg?h=2075fdba": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/fremont-winema/Fremont-Winema%20NF_Chewaucan%20River%20fishing.jpg?h=df11c223": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2020/01/08/19/15/6f4c2c74-e353-4fcd-9b36-5e38d06ec157.jpeg": {
+  "path": "/images/attractions/josephine-county/rough-and-ready-botanical-wayside-2.webp"
+ },
+ "https://www.fws.gov/_next/image?url=https%3A%2F%2Fdoifwsnextprod.prod.acquia-sites.com%2Fsites%2Fdefault%2Ffiles%2Fstyles%2Fratio_16x9%2Fpublic%2Fimages%2F2025-03%2Fseven-pronghorn.jpeg.webp%3Fh%3Db398fb46%26itok%3D8vmhh58h&w=3840&q=75": {
+  "path": "/images/attractions/lake-county/hart-mountain-national-antelope-refuge-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/20260612-FS-REM-0101-1_0.jpg?h=d9b15396&itok=I9LINLoJ": {
+  "error": "HTTP 403"
+ },
+ "https://www.fws.gov/rivers/sites/rivers/files/2022-10/crescent_creek.jpg": {
+  "path": "/images/attractions/klamath-county/crescent-creek-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/10/Barnhardy-1-1536x1000.jpeg": {
+  "path": "/images/attractions/lake-county/barnhardy-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/20250815_115628.jpg?h=b03c4860&itok=qdq7jGRB": {
+  "error": "HTTP 403"
+ },
+ "https://static.wixstatic.com/media/d62109_70ff2ad13e054f07a2413880cd20f70e~mv2.jpg/v1/crop/x_10,y_0,w_386,h_452/fill/w_279,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Schmidt%20house%20pic_JPG.jpg": {
+  "error": "fetch failed"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/81e16c636938cc7aa3541398c590e9a2_m_Yf9156ghl6N8AgJYKfGyLNVFguKj.jpg": {
+  "path": "/images/attractions/klamath-county/oit-dgc-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/5ab4380a3c3a536a7a350151/1525393437129-6BV5HUOUFHIA3NG89ZRK/1916939_1086958068035693_6309988942440689049_n.jpg": {
+  "path": "/images/attractions/lake-county/warner-mountain-ski-area-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/12/Bull-Prairie-6-1600x1000.jpg": {
+  "path": "/images/attractions/lake-county/bull-prairie-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/11/Drake-Peak-Lookout-POI-Crane-Mtn-Mile21-600x450.jpeg": {
+  "path": "/images/attractions/lake-county/bull-prairie-2.webp"
+ },
+ "https://static.wixstatic.com/media/3c2c80_28ee7f758eb64b629ab1d5e3c16a0444~mv2.jpg/v1/fill/w_279,h_317,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/JCHS%20Research%20Library%20March%202026_edited_.jpg": {
+  "error": "fetch failed"
+ },
+ "https://images.squarespace-cdn.com/content/v1/5ab4380a3c3a536a7a350151/1550596282462-P1L3T23K8CCZM7NM7L7L/IMG_5402.jpeg": {
+  "path": "/images/attractions/lake-county/warner-canyon-ski-area-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/272/c468980fc90bfc0dcb1c54f1993156f3_OregonOutbackSBHERO.jpg": {
+  "path": "/images/attractions/lake-county/oregon-outback-scenic-bikeway-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/20260612-FS-REM-0101-3.jpg?h=d9b15396": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/Deep%20Creek%20Campground.jpg?h=c3635fa2&itok=WkGxxoJR": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/DSCF2990.jpg?h=d9b15396": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/DSCF2992.jpg?h=d9b15396": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/08/Coffee-Pot-1-1600x1000.jpeg": {
+  "path": "/images/attractions/lake-county/coffee-pot-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/DSCF3155.jpg?h=c3635fa2&itok=bZBgruuP": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/11/Drake-Peak-Lookout-1-1600x1000.jpeg": {
+  "path": "/images/attractions/lake-county/drake-peak-lookout-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/20250815_135016.jpg?h=3eec7607&itok=VWhhfuQB": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/11/old-growth-juniper.jpg": {
+  "path": "/images/attractions/lake-county/drake-peak-lookout-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/DSCF3141.jpg?h=c3635fa2": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/10/Fort-bidwell-fort-4x3-1.jpg": {
+  "path": "/images/attractions/lake-county/ft-bidwell-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/DSCF2387.jpg?h=73a59ba3&itok=rw7Uu18D": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2021/05/21/13/26/480bedba-976d-4e2c-9c96-a4d2565a1b2d.jpeg": {
+  "path": "/images/attractions/klamath-county/topsy-campground-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/10/GP010053-scaled-e1728680859521-1600x1000.jpg": {
+  "path": "/images/attractions/lake-county/ft-bidwell-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/DSCF2396.jpg?h=d9b15396": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/20250815_135345.jpg?h=19f14c2c": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/12/Glass-House-POI-Hart-Lake-600x450.jpeg": {
+  "path": "/images/attractions/lake-county/glass-house-2.webp"
+ },
+ "https://oregondiscovery.com/wp-content/uploads/2017/12/fisherHS5Auth.jpg": {
+  "path": "/images/attractions/lake-county/fisher-hot-springs-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2020/10/Shirk-Ranch-1.jpeg": {
+  "path": "/images/attractions/lake-county/guano-creek-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/03/Glass-House-1-1600x1000.jpeg": {
+  "path": "/images/attractions/lake-county/glass-house-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/20250815_132137.jpg?h=19f14c2c": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/20250815_131642.jpg?h=19f14c2c&itok=FYiAKIZb": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/06/Milk-Honey-2-river-600x450.jpeg": {
+  "path": "/images/attractions/lake-county/milk-and-honey-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/611954cfead12509dd34020d/8e5acbe5-3567-4d63-9e08-237fecefbdaf/bathousesunrise1.jpg": {
+  "path": "/images/attractions/lake-county/summer-lake-hot-springs-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2022/06/Milk-Honey-1-leading-out.jpeg": {
+  "path": "/images/attractions/lake-county/milk-and-honey-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/Vee%20Lake%20Campground.jpg?h=c3635fa2&itok=xJlnN0vE": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2025/02/Shirk-Ranch-1-1600x1000.jpeg": {
+  "path": "/images/attractions/lake-county/shirk-ranch-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/611954cfead12509dd34020d/3fa98f46-d9af-462e-b31c-cefc81a7b85a/rockpools.jpg": {
+  "path": "/images/attractions/lake-county/summer-lake-hot-springs-2.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/hero/public/r06/fremont-winema/image/Willow%20Creek%20Campground.jpg?h=c3635fa2&itok=v4ujaHTk": {
+  "error": "HTTP 403"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/DSCF2471.jpg?h=c3635fa2": {
+  "error": "HTTP 403"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/11/Bullard-Canyon-1-1600x1000.jpeg": {
+  "path": "/images/attractions/lake-county/tall-town-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2024/11/Bullard-Canyon-Heryford-Brothers-Building.jpeg": {
+  "path": "/images/attractions/lake-county/tall-town-2.webp"
+ },
+ "https://hunters-hotsprings.com/assets/images/northern-lights.jpg": {
+  "path": "/images/attractions/lake-county/hunters-hot-springs-2.webp"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/71abacb88a3701dfa95c93f19d04a4d3_t_IMG_7650.jpg": {
+  "path": "/images/attractions/lake-county/goose-landing-1.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2021/06/Winter-Summer-13-1-600x450.jpeg": {
+  "path": "/images/attractions/lake-county/winter-and-summer-2.webp"
+ },
+ "https://darksky.org/app/uploads/2024/03/Standing-in-awe-at-Warner_Valley-Overlook_creditJoeyHamilton.jpg": {
+  "path": "/images/attractions/lake-county/oregon-outback-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/fremont-winema/image/Willow%20Creek%20Campground%202.jpg?h=c3635fa2": {
+  "error": "HTTP 403"
+ },
+ "https://d22ksth68ujgu2.cloudfront.net/0b8e5f1cbdedf49cc3f26d2cefe3d18e_m_pP9Mpabxtfd53gDTLSrlBlA3H2QP.jpg": {
+  "path": "/images/attractions/lake-county/soroptimist-fitness-park-1.webp"
+ },
+ "https://www.lchm.org/wp-content/uploads/2021/07/research_lib-1024x1024.jpg": {
+  "path": "/images/attractions/lane-county/lane-county-history-museum-2.webp"
+ },
+ "https://dirtyfreehub.org/wp-content/uploads/2021/06/Winter-Summer-1-1472x1000.jpeg": {
+  "path": "/images/attractions/lake-county/winter-and-summer-1.webp"
+ },
+ "https://lh3.googleusercontent.com/sitesv/AG8ngQVD_KVRjJt1pYt0Rbz8e5pKQ3xTAZL8kJJafR-szv2whyzjEcd28YdeUXbyGs5ayF20VGaSSKX5pQNQk68Dp93Rrk5Vldy8okH42oF9zP5a8MET7qyuVhy8KjGw6VgaGvCYDs5ffQ0yAjT6rqSUa34ls_ttRtnn_lFKtrfiAmI2DvA7PmVUdWCCgAGFNVExzuWPtrzBA7v77PidiitOrZWZro4WUBWKobb6NlD9kGw=w1280": {
+  "error": "HTTP 403"
+ },
+ "https://lh3.googleusercontent.com/sitesv/AG8ngQUW1b-Kj652MCWQEL-gxLY5gSHy_kHOFE1nRA3q0nAmD5lgu7XB3vOyXFBs9GQc72daLZJ5Bp_aeRlX-dp3_INDYIoJIIVCvzygRF2BxvWbjyPUJWPHDZk7r-3tkXF63Sk3-8AfK98aF1ezNZQM7GnmcoJvf6AvQYZm2R6Amay2hHGaw7w9dalz03CLJSUaRUPdkM7SIZFJuP3lnvz7AtSAXhUkHu2d4md9jXVV=w1280": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/2023/04/12/15/41/1a44b284-8a1f-4a7d-8b87-b0d4832a1d13.jpeg": {
+  "path": "/images/attractions/klamath-county/surveyor-recreation-site-2.webp"
+ },
+ "https://www.lchm.org/wp-content/uploads/2022/05/LCHM_exterior-2022-square.jpg": {
+  "path": "/images/attractions/lane-county/lane-county-history-museum-1.webp"
+ },
+ "https://hunters-hotsprings.com/assets/images/pool.jpg": {
+  "path": "/images/attractions/lake-county/hunters-hot-springs-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2023/08/22/00/37/233707_ce2fc4df-9799-45d0-b32f-326e27f4605d_1440.webp": {
+  "path": "/images/attractions/klamath-county/aspen-point-campground-1.webp"
+ },
+ "https://static.wixstatic.com/media/bd263b_e55db18d440a4edea52376be5e0628f1~mv2.png/v1/fill/w_785,h_643,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design-13.png": {
+  "error": "fetch failed"
+ },
+ "https://static.wixstatic.com/media/d41831_23be1c576ef8421ba02b3e0c58f96d73~mv2.jpg/v1/fill/w_189,h_249,al_c,q_80,usm_0.66_1.00_0.01,blur_3,enc_avif,quality_auto/d41831_23be1c576ef8421ba02b3e0c58f96d73~mv2.jpg": {
+  "error": "fetch failed"
+ },
+ "https://cdn.recreation.gov/public/images/70276_1440.webp": {
+  "path": "/images/attractions/klamath-county/aspen-point-campground-2.webp"
+ },
+ "https://bohemiagoldminingmuseum.com/": {
+  "error": "Input buffer contains unsupported image format"
+ },
+ "https://cdn.recreation.gov/public/2019/02/11/23/33/251567_4eaf1f28-7705-42ff-a66b-48e0495566d3_1440.webp": {
+  "path": "/images/attractions/klamath-county/contorta-flat-campground-1.webp"
+ },
+ "https://jsma.uoregon.edu/sites/default/files/2026-05/2022-34-1_20230103_120612_20260507_reprocess.jpg": {
+  "path": "/images/attractions/lane-county/jordan-schnitzer-museum-of-art-2.webp"
+ },
+ "https://mnch.uoregon.edu/sites/default/files/styles/banner_image_desktop_small_to_desktop_medium/public/Museum%20Photo_small_0.jpg?h=032777b8&itok=YuPBq1QF": {
+  "path": "/images/attractions/lane-county/museum-of-natural-and-cultural-history-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/75640_1440.webp": {
+  "path": "/images/attractions/klamath-county/contorta-flat-campground-2.webp"
+ },
+ "https://bohemiagoldminingmuseum.com/wp-content/uploads/2023/07/Gold-Mining-Museum-1-791x1024.jpg": {
+  "path": "/images/attractions/lane-county/bohemia-gold-mining-museum-1.webp"
+ },
+ "https://www.siuslawpioneermuseum.com/wp-content/uploads/2021/05/siuslaw-header-800px.jpg": {
+  "path": "/images/attractions/lane-county/siuslaw-pioneer-museum-1.webp"
+ },
+ "https://smjhouse.org/wp-content/uploads/2022/01/Garden-Terrace-facing-West-1280px-300x248.jpg": {
+  "path": "/images/attractions/lane-county/shelton-mcmurphey-johnson-house-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83492_1440.webp": {
+  "path": "/images/attractions/klamath-county/crescent-creek-campground-1.webp"
+ },
+ "https://www.siuslawpioneermuseum.com/wp-content/uploads/2021/03/siuslaw-sections-what-is-in-the-museum.jpg": {
+  "path": "/images/attractions/lane-county/siuslaw-pioneer-museum-3.webp"
+ },
+ "https://cdn.recreation.gov/public/images/73755_700.webp": {
+  "path": "/images/attractions/klamath-county/crescent-lake-campground-1.webp"
+ },
+ "https://hunters-hotsprings.com/assets/images/geyser.jpg": {
+  "path": "/images/attractions/lake-county/old-perpetual-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/73826_700.webp": {
+  "path": "/images/attractions/klamath-county/crescent-lake-campground-2.webp"
+ },
+ "https://img1.wsimg.com/isteam/ip/df494c04-96af-446f-a975-20edc4e9a7fb/GOH23%20DW%20museum%20prop.JPG": {
+  "path": "/images/attractions/lane-county/oregon-aviation-historical-society-and-museum-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/legacy-media/siuslaw/DiscoveryAgents_Cummins_Creek_Loop_Trail-2742.jpg?h=3c16cf49": {
+  "error": "HTTP 403"
+ },
+ "https://www.siuslawpioneermuseum.com/wp-content/uploads/2021/03/siuslaw-tools.jpg": {
+  "path": "/images/attractions/lane-county/siuslaw-pioneer-museum-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/689bbeb31598bc4cd699958f/1f83530e-f62f-47dd-95ee-33c4be44c562/IMG_4299-2.jpg": {
+  "path": "/images/attractions/lane-county/oregon-air-and-space-museum-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/siuslaw/image/Rock%20Creek%20Wilderness.jpg?h=fea86f9e": {
+  "error": "HTTP 403"
+ },
+ "https://myodfw.com/sites/default/files/styles/380_max_width/public/1282_boat_lake_fern_ridge_munsel_odfw.jpg?itok=8PhQws61": {
+  "path": "/images/attractions/lane-county/fern-ridge-wildlife-area-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/02/11/23/38/266138_1b9d57c8-71aa-49e6-8a1b-8d663632dabe_1440.webp": {
+  "path": "/images/attractions/klamath-county/east-davis-campground-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/a4eb88f73be5bf159a14c0d1ed959117_tmptmpSSOtRQ": {
+  "path": "/images/attractions/lane-county/carl-g-washburne-memorial-state-park-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/a2e1863173a6a51dba23315944fa9788_tmptmpNwPQe4": {
+  "path": "/images/attractions/lane-county/carl-g-washburne-memorial-state-park-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/3a4586fc074fe308dbfa4cafe71fae18_tmptmp1couhV": {
+  "path": "/images/attractions/lane-county/carl-g-washburne-memorial-state-park-3.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/willamette/image/IMG_0186.JPG?h=55bf8242": {
+  "error": "HTTP 403"
+ },
+ "https://cdn.recreation.gov/public/images/83460_1440.webp": {
+  "path": "/images/attractions/klamath-county/east-davis-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2022/02/17/20/42/251712_484febb1-7a31-4289-8265-fd4587f36f7d_1440.webp": {
+  "path": "/images/attractions/klamath-county/fourmile-lake-campground-1.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1371105799-Bridge-Creek-Falls-OR-2.jpg": {
+  "path": "/images/attractions/lane-county/bridge-creek-falls-2.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1371105798-Bridge-Creek-Falls-OR.jpg": {
+  "path": "/images/attractions/lane-county/bridge-creek-falls-1.webp"
+ },
+ "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,h_393,q_65,w_639/v1/crm/lanecounty/222-3-11421_jpeg-3106d44bd004c9e_310727ab-b206-ed5c-f3c5b45a3f56f868.jpg": {
+  "path": "/images/attractions/lane-county/sweet-creek-falls-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/10/09/23/01/251712_7538f247-d836-42ff-b9e9-d27f30d009e1_700.webp": {
+  "path": "/images/attractions/klamath-county/fourmile-lake-campground-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/f59d1b679b2384b171e4806952df3170_tmptmpbX5ZJO": {
+  "path": "/images/attractions/lane-county/darlingtonia-state-natural-site-2.webp"
+ },
+ "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,f_jpg,g_xy_center,h_809,q_65,w_639,x_2394,y_1368/v1/clients/lanecounty/222_3_13677_jpeg_07feca86-b83e-4dd8-b1c3-12100345577f.jpg": {
+  "path": "/images/attractions/lane-county/sweet-creek-falls-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2020/09/10/18/07/816eeec3-ee7d-4433-a57d-2bfa24ec6f07.jpeg": {
+  "path": "/images/attractions/klamath-county/topsy-campground-2.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/68c6170816f6655da8d6bc28/408f683a-63bf-48f3-bdf2-d3266ea3939b/Kayak-pic-e1553711977721.jpg": {
+  "path": "/images/attractions/lane-county/siuslaw-river-water-trail-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/4dc83eca6a35d0b8a4d3731db3b5bc32_tmptmpqdWTsR": {
+  "path": "/images/attractions/lane-county/darlingtonia-state-natural-site-1.webp"
+ },
+ "https://images.squarespace-cdn.com/content/v1/68c6170816f6655da8d6bc28/c8adfc8f-4932-454a-b570-e4d3545fd86c/SWC-Campers-in-kayaks_1-e1553712020576.jpg": {
+  "path": "/images/attractions/lane-county/siuslaw-river-water-trail-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83436_1440.webp": {
+  "path": "/images/attractions/klamath-county/princess-creek-campground-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/7face4bc7aa8552e2b476b0e857938ab_tmptmppLrIIs": {
+  "path": "/images/attractions/lane-county/dexter-state-recreation-site-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83437_1440.webp": {
+  "path": "/images/attractions/klamath-county/princess-creek-campground-2.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1311481085-Diamond-Creek-Falls-OR-248.jpg": {
+  "path": "/images/attractions/lane-county/diamond-creek-falls-1.webp"
+ },
+ "https://www.fs.usda.gov/sites/nfs/files/styles/thumbnail/public/r06/siuslaw/image/20210515_Sutton2_SiuslawNF_JoanieSchmidgall.jpeg?h=fc2f2e39": {
+  "error": "HTTP 403"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/fab91f13947889933f2c3e43ffa5c788_tmptmp8qnT6g": {
+  "path": "/images/attractions/lane-county/dexter-state-recreation-site-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/cfbf040024758aeb8b12d4ad45fdad72_tmptmp8uM7Qt": {
+  "path": "/images/attractions/lane-county/dexter-state-recreation-site-3.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66587_700.webp": {
+  "path": "/images/attractions/klamath-county/simax-group-camp-1.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1311481085-Diamond-Creek-Falls-OR-248-2.jpg": {
+  "path": "/images/attractions/lane-county/diamond-creek-falls-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66590_700.webp": {
+  "path": "/images/attractions/klamath-county/simax-group-camp-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68379_700.webp": {
+  "path": "/images/attractions/klamath-county/spring-campground-1.webp"
+ },
+ "https://www.blm.gov/sites/default/files/styles/hero_lg_content/public/externals/a674cf23e0c8fa950a9e32cd55a0a0f9.jpeg?itok=FDnceSso": {
+  "path": "/images/attractions/lane-county/row-river-trail-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/75cb30930f5184200ab6e486b0eb6784_tmptmpcOwnCL": {
+  "path": "/images/attractions/lane-county/elijah-bristow-state-park-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/1093cfa4b52b635c9ccd1a9d4f10e963_tmptmphHNHT7": {
+  "path": "/images/attractions/lane-county/elijah-bristow-state-park-1.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/02/11/23/04/267070_79ce9360-b189-480e-b364-2b355c58ff80_1440.webp": {
+  "path": "/images/attractions/klamath-county/sunset-cove-campground-1.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68423_700.webp": {
+  "path": "/images/attractions/klamath-county/spring-campground-2.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/539e48946d0608b85e7ae5d50c53d9ed_tmptmpbbXHFU": {
+  "path": "/images/attractions/lane-county/jasper-state-recreation-site-1.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1311486700-Fall-Creek-Falls-OR-251.jpg": {
+  "path": "/images/attractions/lane-county/fall-creek-falls-lane-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/7dd8ba020628fd7e1755d3dc85f9c519_tmptmpg0wYQB": {
+  "path": "/images/attractions/lane-county/jasper-state-recreation-site-2.webp"
+ },
+ "https://davidschair.org/wp-content/uploads/2023/12/jeff-florence-2-cropped-300x214.jpg": {
+  "path": "/images/attractions/lane-county/davids-chair-florence-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/c7c3dfa6a43070a23c0ed9224ae83c15_tmptmpISBhHk": {
+  "path": "/images/attractions/lane-county/elijah-bristow-state-park-3.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/251ed1f8d4798ab5cfacbaa73866b9b3_tmptmprjH9QH": {
+  "path": "/images/attractions/lane-county/jasper-state-recreation-site-3.webp"
+ },
+ "https://cdn.recreation.gov/public/images/83442_1440.webp": {
+  "path": "/images/attractions/klamath-county/sunset-cove-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/2019/02/11/23/05/233195_1396eab2-e3aa-4b17-a3a8-8acd366f05cc_1440.webp": {
+  "path": "/images/attractions/klamath-county/trapper-creek-campground-1.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1311629447-Lake-Creek-Falls-OR-741-4.jpg": {
+  "path": "/images/attractions/lane-county/lake-creek-falls-2.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1311629447-Lake-Creek-Falls-OR-741.jpg": {
+  "path": "/images/attractions/lane-county/lake-creek-falls-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/af40ed9d6852b579843e9ad40ec242ec_tmptmppGYf0w": {
+  "path": "/images/attractions/lane-county/jessie-m-honeyman-memorial-state-park-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/c139792fd7642ba3eb6468a1eb2e8ef8_tmptmpV93WVJ": {
+  "path": "/images/attractions/lane-county/jessie-m-honeyman-memorial-state-park-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/68368_700.webp": {
+  "path": "/images/attractions/klamath-county/trapper-creek-campground-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66581_700.webp": {
+  "path": "/images/attractions/klamath-county/whitefish-horse-camp-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/b3f36d720f9bcf6c05e2ad3437b347f2_tmptmp3Wj81b": {
+  "path": "/images/attractions/lane-county/lowell-state-recreation-site-1.webp"
+ },
+ "https://d3uw6f38ocgirn.cloudfront.net/media/up/1/0bc033b66a664bc39469c9e4d6787322_tmptmpDZUwRS": {
+  "path": "/images/attractions/lane-county/jessie-m-honeyman-memorial-state-park-3.webp"
+ },
+ "https://www.waterfallsnorthwest.com/pictures/1513998143-Linton%20Falls%20OR-2.jpg": {
+  "path": "/images/attractions/lane-county/linton-falls-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/66593_700.webp": {
+  "path": "/images/attractions/klamath-county/whitefish-horse-camp-2.webp"
+ },
+ "https://cdn.recreation.gov/public/images/67998_700.webp": {
+  "path": "/images/attractions/klamath-county/windy-group-camp-1.webp"
+ },
+ "https://davidschair.org/wp-content/uploads/2022/12/davids-chair-photo-7-cropped.jpg": {
+  "path": "/images/attractions/lane-county/davids-chair-florence-2.webp"
  }
 }
