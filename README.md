@@ -1,36 +1,81 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Oregon County Capers — Next.js
 
-## Getting Started
+Next.js (App Router) version of the WordPress site
+`marriane-vydra-stage.devdesignbuild.com`. Same URLs, same images, same content —
+but every repeated page is generated from **one template + JSON data**.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build      # production build (all pages pre-rendered as static HTML)
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How content works
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+All content lives in `/data`. Images live in `public/wp-content/uploads/` (same paths as WordPress).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| File | What it drives | Template |
+| --- | --- | --- |
+| `data/counties.json` | 36 county pages `/county-tags/<slug>/` + counties list | `src/app/county-tags/[slug]/page.tsx` |
+| `data/attractions.json` | attraction pages `/county/<slug>/` | `src/app/county/[slug]/page.tsx` |
+| `data/categories.json` | category pages `/county-categories/<slug>/` + Capers page | `src/app/county-categories/[slug]/page.tsx` |
+| `data/capers.json` | `/capers/<slug>/` | `src/app/capers/[slug]/page.tsx` |
+| `data/products.json` | `/shop/`, `/product/<slug>/`, home merch carousel | `src/app/product/[slug]/page.tsx` |
 
-## Learn More
+### Add a new attraction to a county
 
-To learn more about Next.js, take a look at the following resources:
+Add an object to `data/attractions.json`:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```json
+{
+  "id": 9001,
+  "slug": "multnomah-falls",
+  "title": "Multnomah Falls",
+  "order": 100,
+  "image": "/wp-content/uploads/my-images/multnomah.jpg",
+  "imageAlt": "Multnomah Falls",
+  "contentHtml": "<p>Oregon's tallest waterfall…</p>",
+  "excerpt": "Oregon's tallest waterfall…",
+  "website": "fs.usda.gov/…", "websiteUrl": "",
+  "phone": "", "email": "",
+  "address": "53000 E Historic Columbia River Hwy, Bridal Veil, OR",
+  "mapQuery": "",
+  "timings": [{ "day": "Monday", "hours": "Open daily" }],
+  "counties": ["multnomah-county"],
+  "categories": ["waterfalls"]
+}
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+That's it — the attraction page is created, it appears on the Multnomah County page,
+in the Waterfalls category, in the filters and in the home-page carousels.
+Put new images anywhere under `public/` and reference them with a path starting with `/`.
 
-## Deploy on Vercel
+### Edit a county
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit its entry in `data/counties.json` (seat, founded, area, population, `contentHtml`, `gallery`, …).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Re-importing from WordPress
+
+While WordPress is still the place you edit content, pull the latest into the JSON files:
+
+```bash
+npm run import
+# or from a different WordPress URL
+WP_URL=https://example.com npm run import
+```
+
+`scripts/import-wordpress.mjs` reads the WordPress REST API plus the rendered pages
+(JetEngine fields aren't in the API), rewrites image URLs to local paths and downloads
+new images. **It overwrites the files in `/data`**, so don't hand-edit JSON and re-import
+at the same time — pick one source of truth.
+
+## Not migrated (needs a decision)
+
+- **Shop checkout / cart / my-account** (WooCommerce). Products display; “Add to cart” is disabled.
+  Hook up Stripe, Shopify Buy Button or Snipcart when ready.
+- **Newsletter form** shows a thank-you message but doesn't send anywhere yet
+  (see `src/components/Newsletter.tsx`).
+- Footer contact details / social links are the same placeholders as the WordPress site.

@@ -1,0 +1,54 @@
+[
+  {
+    "id": 338,
+    "slug": "oregon-fridge-magnet",
+    "name": "oregon fridge Magnet",
+    "price": "4.00",
+    "currency": "$",
+    "shortDescription": "",
+    "descriptionHtml": "",
+    "image": "/wp-content/uploads/2026/01/Rectangle-6-13.png",
+    "images": [
+      "/wp-content/uploads/2026/01/Rectangle-6-13.png"
+    ]
+  },
+  {
+    "id": 336,
+    "slug": "lake-county-t-shirt",
+    "name": "lake county T-shirt",
+    "price": "4.00",
+    "currency": "$",
+    "shortDescription": "",
+    "descriptionHtml": "",
+    "image": "/wp-content/uploads/2026/01/Rectangle-6-12.png",
+    "images": [
+      "/wp-content/uploads/2026/01/Rectangle-6-12.png"
+    ]
+  },
+  {
+    "id": 334,
+    "slug": "oregon-mug",
+    "name": "Oregon Mug",
+    "price": "4.00",
+    "currency": "$",
+    "shortDescription": "",
+    "descriptionHtml": "",
+    "image": "/wp-content/uploads/2026/01/Rectangle-6-11.png",
+    "images": [
+      "/wp-content/uploads/2026/01/Rectangle-6-11.png"
+    ]
+  },
+  {
+    "id": 332,
+    "slug": "astoria-keychain",
+    "name": "astoria keychain",
+    "price": "4.00",
+    "currency": "$",
+    "shortDescription": "",
+    "descriptionHtml": "",
+    "image": "/wp-content/uploads/2026/01/Rectangle-6-10.png",
+    "images": [
+      "/wp-content/uploads/2026/01/Rectangle-6-10.png"
+    ]
+  }
+]

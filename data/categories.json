@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "slug": "bicycling",
+    "name": "Bicycling",
+    "description": ""
+  },
+  {
+    "id": 2,
+    "slug": "blm-campgrounds",
+    "name": "BLM Campgrounds",
+    "description": ""
+  },
+  {
+    "id": 3,
+    "slug": "breweries",
+    "name": "Breweries",
+    "description": ""
+  },
+  {
+    "id": 4,
+    "slug": "county-non-technical-high-points",
+    "name": "County Non Technical High Points",
+    "description": ""
+  },
+  {
+    "id": 5,
+    "slug": "covered-bridges",
+    "name": "Covered Bridges",
+    "description": ""
+  },
+  {
+    "id": 6,
+    "slug": "hiking",
+    "name": "Hiking",
+    "description": ""
+  },
+  {
+    "id": 7,
+    "slug": "hot-springs",
+    "name": "Hot Springs",
+    "description": ""
+  },
+  {
+    "id": 8,
+    "slug": "lighthouses",
+    "name": "Lighthouses",
+    "description": ""
+  },
+  {
+    "id": 9,
+    "slug": "museums",
+    "name": "Museums",
+    "description": ""
+  },
+  {
+    "id": 10,
+    "slug": "national-forest-campgrounds",
+    "name": "National Forest Campgrounds",
+    "description": ""
+  },
+  {
+    "id": 11,
+    "slug": "national-forests",
+    "name": "National Forests",
+    "description": ""
+  },
+  {
+    "id": 12,
+    "slug": "national-parks",
+    "name": "National Parks",
+    "description": ""
+  },
+  {
+    "id": 13,
+    "slug": "national-wildlife-refuges",
+    "name": "National Wildlife Refuges",
+    "description": ""
+  },
+  {
+    "id": 14,
+    "slug": "odfw-wildlife-areas",
+    "name": "ODFW Wildlife Areas",
+    "description": ""
+  },
+  {
+    "id": 15,
+    "slug": "paddling",
+    "name": "Paddling",
+    "description": ""
+  },
+  {
+    "id": 16,
+    "slug": "public-disc-golf-courses",
+    "name": "Public Disc Golf Courses",
+    "description": ""
+  },
+  {
+    "id": 17,
+    "slug": "rare-sightings",
+    "name": "Rare Sightings",
+    "description": ""
+  },
+  {
+    "id": 18,
+    "slug": "road-trips",
+    "name": "Road Trips",
+    "description": ""
+  },
+  {
+    "id": 19,
+    "slug": "snow-sports",
+    "name": "Snow Sports",
+    "description": ""
+  },
+  {
+    "id": 20,
+    "slug": "state-parks",
+    "name": "State Parks",
+    "description": ""
+  },
+  {
+    "id": 21,
+    "slug": "waterfalls",
+    "name": "Waterfalls",
+    "description": ""
+  },
+  {
+    "id": 22,
+    "slug": "wild-and-scenic-rivers",
+    "name": "Wild and Scenic Rivers",
+    "description": ""
+  },
+  {
+    "id": 23,
+    "slug": "wilderness-areas",
+    "name": "Wilderness Areas",
+    "description": ""
+  },
+  {
+    "id": 24,
+    "slug": "wineries",
+    "name": "Wineries",
+    "description": ""
+  }
+]

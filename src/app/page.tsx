@@ -1,95 +1,190 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import Link from "next/link";
+import Carousel from "@/components/Carousel";
+import Photo from "@/components/Photo";
+import { assets, attractionsInCategory, attractionsInCounty, categories, counties, getCounty, products } from "@/lib/data";
+
+const U = "/wp-content/uploads/2026/01";
+
+const choices = [
+  { img: `${U}/Rectangle-6-7.png`, title: "Explore by Capers", text: "Find adventures that match your interests.", cta: "View All Capers", href: "/capers-categories/" },
+  { img: `${U}/Rectangle-6-8.png`, title: "Explore by County", text: "Start with any of Oregon’s 36 counties.", cta: "View All Counties", href: "/county-tags/" },
+  { img: `${U}/Rectangle-6-9.png`, title: "Popular Highlights", text: "See trending attractions across the state.", cta: "Explore Top Picks", href: "/county/" },
+];
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  // One card per interest (category), using a photo from that category.
+  const interests = categories
+    .map((c) => {
+      const list = attractionsInCategory(c.slug);
+      const pick = list.find((a) => a.banner && !a.banner.src.includes("fs.usda.gov")) || list.find((a) => a.banner);
+      return { ...c, count: list.length, image: pick?.banner?.src ?? null, alt: pick?.banner?.alt ?? c.name };
+    })
+    .filter((c) => c.count > 0);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+  // Featured: one attraction with a banner photo and a note from each of several counties.
+  const featured = counties
+    .map((c) => attractionsInCounty(c.slug).find((a) => a.banner && a.excerpt && !a.banner.src.includes("fs.usda.gov")))
+    .filter((a) => a !== undefined)
+    .slice(0, 8);
+  const countiesWithCounts = counties.map((c) => ({ ...c, count: attractionsInCounty(c.slug).length }));
+
+  return (
+    <>
+      {/* HERO */}
+      <section className="hero hero-home">
+        <Image src={`${U}/Section.png`} alt="" fill priority sizes="100vw" className="bg" />
+        <div>
+          <h1>
+            Discover Oregon,
+            <br />
+            One County at a Time
+          </h1>
+          <div className="pill">Explore all 36 counties through adventures, attractions, and hidden gems statewide.</div>
+          <p>
+            Find waterfalls, parks, trails, cultural sites, scenic drives, and local experiences across Oregon—organized
+            by both category and county for easy trip planning.
+          </p>
+          <div className="buttons">
+            <Link href="/capers-categories/" className="btn btn-orange">Explore by Capers</Link>
+            <Link href="/county-tags/" className="btn btn-green">Explore by County</Link>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* CHOOSE YOUR WAY */}
+      <section className="section">
+        <div className="container">
+          <h2 className="section-title center">Choose Your Way to Explore</h2>
+          <div className="grid grid-3" style={{ marginTop: 30 }}>
+            {choices.map((c) => (
+              <div key={c.title} className="card choice-card">
+                <div className="img">
+                  <Image src={c.img} alt={c.title} fill sizes="(max-width: 860px) 100vw, 400px" />
+                </div>
+                <h3>{c.title}</h3>
+                <p>{c.text}</p>
+                <Link href={c.href} className="link-underline">{c.cta}</Link>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section className="section bg-section about-home" id="about">
+        <Image src={`${U}/about-1.png`} alt="" fill sizes="100vw" className="bg" />
+        <div className="container inner">
+          <div>
+            <h2>About Oregon County Capers</h2>
+            <p>
+              Oregon County Capers is a statewide travel and discovery platform designed to showcase the natural beauty,
+              outdoor adventures, and cultural highlights found across all 36 counties of Oregon.
+            </p>
+            <p>
+              Oregon offers an incredible range of experiences—from iconic waterfalls and scenic rivers to hidden trails,
+              historic towns, wine regions, and vibrant cultural spaces. Oregon County Capers brings everything together in
+              one organized, easy-to-explore destination.
+            </p>
+            <p style={{ color: "var(--teal)", fontWeight: 600, margin: "18px 0 0" }}>Why Oregon County Capers</p>
+            <ul className="check-list">
+              <li>Covers all 36 Oregon counties in one platform</li>
+              <li>Combines statewide discovery with local depth</li>
+              <li>Highlights both popular landmarks and hidden gems</li>
+              <li>Designed to grow with new attractions and experiences</li>
+            </ul>
+            <Link href="/history/" className="btn btn-green">Read More About Us</Link>
+          </div>
+          <div style={{ position: "relative", aspectRatio: "748 / 921", maxWidth: 520, width: "100%", justifySelf: "center" }}>
+            <Image src={`${U}/Group-16.png`} alt="Oregon waterfalls and coastline" fill sizes="(max-width: 860px) 100vw, 520px" />
+          </div>
+        </div>
+      </section>
+
+      {/* EXPLORE BY INTEREST */}
+      <section className="section">
+        <div className="container">
+          <Carousel title="Explore Oregon by Interest" itemWidth="min(260px, 75vw)">
+            {interests.map((c) => (
+              <Link key={c.slug} href={`/county-categories/${c.slug}/`} className="interest-card">
+                <Photo src={c.image} alt={c.alt} sizes="260px" />
+                <span>
+                  {c.name}
+                  <small style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12 }}>{c.count} places</small>
+                </span>
+              </Link>
+            ))}
+          </Carousel>
+        </div>
+      </section>
+
+      {/* FEATURED */}
+      <section className="section bg-section">
+        <Image src={`${U}/Section-1.png`} alt="" fill sizes="100vw" className="bg" />
+        <div className="container">
+          <Carousel title="Featured County" itemWidth="min(560px, 85vw)">
+            {featured.map((a) => (
+              <div key={a.slug} className="featured-card">
+                <Photo src={a.banner!.src} alt={a.banner!.alt} sizes="560px" />
+                <div className="body">
+                  <div className="badge">
+                    <Image src={getCounty(a.counties[0])?.logo || assets.countyBadge} alt="" fill sizes="64px" />
+                  </div>
+                  <div>
+                    <h3>{a.title}</h3>
+                    <p>{a.excerpt}</p>
+                  </div>
+                  <Link href={`/county/${a.slug}/`} className="btn btn-green" style={{ fontSize: 12, padding: "8px 16px" }}>
+                    Explore More
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </Carousel>
+        </div>
+      </section>
+
+      {/* EXPLORE COUNTY */}
+      <section className="section">
+        <div className="container">
+          <Carousel title="Explore Oregon County" itemWidth="180px">
+            {countiesWithCounts.map((c) => (
+              <Link key={c.slug} href={`/county-tags/${c.slug}/`} className="pill-card">
+                {c.cardImage && <Image src={c.cardImage} alt="" fill sizes="180px" style={{ objectFit: "cover" }} />}
+                <div className="badge">
+                  <Image src={c.logo || assets.countyBadge} alt="" fill sizes="64px" />
+                </div>
+                <span className="count">{c.count} Places</span>
+                <strong>{c.name.replace(/ County$/, "")}</strong>
+              </Link>
+            ))}
+          </Carousel>
+        </div>
+      </section>
+
+      {/* MERCH */}
+      {products.length > 0 && (
+        <section className="section bg-section" style={{ background: "#1565d8" }}>
+          <Image src={`${U}/Background-14.png`} alt="" fill sizes="100vw" className="bg" />
+          <div className="container">
+            <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(300px, 80vw)" dark>
+              {products.map((p) => (
+                <Link key={p.slug} href={`/product/${p.slug}/`} className="product-card">
+                  <div className="img">
+                    {p.image && <Image src={p.image} alt={p.name} fill sizes="300px" style={{ objectFit: "contain" }} />}
+                  </div>
+                  <h3>{p.name}</h3>
+                  {p.shortDescription && <p>{p.shortDescription}</p>}
+                  <span className="price">
+                    {p.currency}
+                    {p.price}
+                  </span>
+                </Link>
+              ))}
+            </Carousel>
+          </div>
+        </section>
+      )}
+    </>
   );
 }
