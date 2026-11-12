@@ -94,7 +94,7 @@ export default function HistoryPage() {
       <section className="history-intro">
         <div className="container inner">
           <div>
-            <h2>Oregon - Land, People, and Time</h2>
+            <h2>Oregon - Land, People,<br />and Time</h2>
             <p>
               Oregon’s landscape reads like a travelogue written by the planet: jagged coastline, emerald rainforests, high
               desert, volcanic peaks, broad valleys and meandering rivers. Those physical features shaped human life here
@@ -104,7 +104,7 @@ export default function HistoryPage() {
               country and culture today.
             </p>
           </div>
-          <div style={{ position: "relative", aspectRatio: "858 / 780" }}>
+          <div className="history-collage">
             <Image src={`${U}/collage.png`} alt="Oregon landscape collage" fill sizes="(max-width: 860px) 100vw, 560px" />
           </div>
         </div>
@@ -130,7 +130,7 @@ export default function HistoryPage() {
                 src={`${U}/lighthouse.png`}
                 alt="Cape Disappointment lighthouse"
                 fill
-                sizes="(max-width: 860px) 100vw, 440px"
+                sizes="(max-width: 767px) 100vw, 1px"
               />
             </div>
             <div>
@@ -146,11 +146,11 @@ export default function HistoryPage() {
       </section>
 
       {tribes.map((t, i) => (
-        <section key={t.name} className={`tribe${i % 2 ? " flip" : ""}`}>
+        <section key={t.name} className={`tribe${i % 2 ? " flip" : ""}${[1, 2, 7, 8].includes(i) ? " photo-after-mobile" : ""}`}>
           <div className="container inner">
             <div className="photo">
-              <Image src={`${U}/${t.photo}`} alt={t.name} fill sizes="(max-width: 860px) 100vw, 600px" />
-              <Image src={`${U}/${t.overlay}`} alt="" fill sizes="(max-width: 860px) 100vw, 600px" style={{ padding: "2%" }} />
+              <Image src={`${U}/${t.photo}`} alt={t.name} fill sizes="(max-width: 767px) 100vw, 603px" />
+              <Image src={`${U}/${t.overlay}`} alt="" width={578} height={578} sizes="(max-width: 767px) 100vw, 578px" className="tribe-badge" />
             </div>
             <div>
               <h2>
