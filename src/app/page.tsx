@@ -163,13 +163,13 @@ export default function Home() {
       {/* EXPLORE COUNTY */}
       <section className="section pad-70">
         <div className="container">
-          <Carousel title="Explore Oregon County" itemWidth="min(calc((100% - 120px) / 7), 60vw)">
+          <Carousel title="Explore Oregon County" itemWidth="calc((100vw + 60px) / 7)" bleed>
             {countiesWithCounts.map((c) => (
               <Link key={c.slug} href={`/county-tags/${c.slug}/`} className="pill-card">
                 <Photo src={c.cardImage} alt="" sizes="200px" />
                 <div className="pill-body">
                   <div className="badge">
-                    <Image src={c.logo || assets.countyBadge} alt="" fill sizes="74px" />
+                    <Image src={c.logo || assets.countyBadge} alt="" fill sizes="96px" />
                   </div>
                   <span className="count">{c.count} Places</span>
                   <strong>{c.name.replace(/ County$/, "")}</strong>

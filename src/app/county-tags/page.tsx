@@ -12,7 +12,7 @@ export default function CountiesPage() {
   return (
     <>
       <PageHero title="County Tags" image={null} />
-      <section className="listing">
+      <section className="listing listing-sky">
         <div className="container">
           <CountyGrid
             counties={counties}

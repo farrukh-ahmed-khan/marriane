@@ -9,12 +9,15 @@ export default function Carousel({
   gap = "20px",
   children,
   dark,
+  bleed,
 }: {
   title: string;
   itemWidth?: string;
   gap?: string;
   children: ReactNode;
   dark?: boolean;
+  /** Track runs edge to edge of the screen instead of the content width. */
+  bleed?: boolean;
 }) {
   const track = useRef<HTMLDivElement>(null);
   const scroll = (dir: 1 | -1) => {
@@ -23,7 +26,7 @@ export default function Carousel({
   };
 
   return (
-    <div className={dark ? "on-dark" : ""}>
+    <div className={[dark && "on-dark", bleed && "carousel-bleed"].filter(Boolean).join(" ")}>
       <div className="carousel-head">
         <h2 className="section-title">{title}</h2>
         <div className="carousel-arrows">

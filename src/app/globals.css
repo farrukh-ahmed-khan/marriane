@@ -42,7 +42,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  background: var(--sky);
+  background: #fff;
 }
 img {
   max-width: 100%;
@@ -408,6 +408,19 @@ p {
 .on-dark .section-title {
   color: #fff;
 }
+/* edge-to-edge track (Explore Oregon County) */
+.carousel-bleed .carousel-track {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding-left: 10px;
+  padding-right: 10px;
+  scroll-padding-left: 10px;
+}
+@media (max-width: 767px) {
+  .carousel-bleed .carousel-track {
+    --item: calc(100vw - 80px) !important;
+  }
+}
 
 /* ---------- placeholder for items without a photo ---------- */
 .ph {
@@ -485,6 +498,7 @@ p {
 }
 .interest-section {
   padding: 90px 0 80px;
+  background: var(--sky);
 }
 .pad-70 {
   padding: 70px 0;
@@ -787,6 +801,7 @@ p {
 .pill-card > .ph {
   z-index: -1;
 }
+/* white "U": flat top, round bottom, badge sitting half above the top edge */
 .pill-card .pill-body {
   background: #fff;
   border-radius: 0 0 500px 500px;
@@ -796,15 +811,18 @@ p {
   gap: 15px;
   margin-bottom: 13px;
   padding-top: 0;
+  min-height: 170px;
 }
 .pill-card .badge {
   position: relative;
-  width: 74px;
-  height: 74px;
-  margin-top: -40px;
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  margin-top: -48px; /* half of the badge sits above the white area */
   border-radius: 50%;
   overflow: hidden;
   background: #fff;
+  box-shadow: 0 0 0 4px #fff;
 }
 .pill-card .count {
   background: var(--green);
@@ -1079,6 +1097,9 @@ p {
    ========================================================= */
 .listing {
   padding: 50px 0;
+}
+.listing-sky {
+  background: var(--sky);
 }
 .toolbar {
   display: flex;
@@ -1895,6 +1916,7 @@ a.stat:hover h3 {
 }
 .tribe {
   padding: 65px 0;
+  background: var(--sky);
 }
 .tribe .inner {
   display: grid;
