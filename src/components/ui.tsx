@@ -4,10 +4,18 @@ import Photo from "./Photo";
 import { assets, type AttractionCard, type County } from "@/lib/data";
 
 /** Full-width image hero used on every inner page. */
-export function PageHero({ title, image, children }: { title: string; image: string | null; children?: ReactNode }) {
+export function PageHero({
+  title,
+  image,
+  children,
+}: {
+  title: string;
+  image: string | null | string[];
+  children?: ReactNode;
+}) {
   return (
     <section className="hero">
-      <Photo src={image || assets.listingHero} alt="" priority sizes="100vw" className="bg" />
+      <Photo src={[...(Array.isArray(image) ? image : [image]), assets.listingHero]} alt="" priority sizes="100vw" className="bg" />
       <div>
         <h1>{title}</h1>
         {children}
@@ -37,7 +45,7 @@ export function Breadcrumb({ items }: { items: { href?: string; label: string }[
 export function AttractionTile({ a }: { a: AttractionCard }) {
   return (
     <Link href={`/county/${a.slug}/`} className="tile">
-      <Photo src={a.image} alt={a.imageAlt} sizes="(max-width: 860px) 50vw, 240px" />
+      <Photo src={a.images} alt={a.imageAlt} sizes="(max-width: 860px) 50vw, 240px" />
       <span>{a.title}</span>
     </Link>
   );

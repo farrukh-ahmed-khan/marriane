@@ -1294,6 +1294,7 @@ h4 {
 
 /* ---------- external photos & placeholders ---------- */
 img.ext {
+  color: transparent; /* hide alt text while a fallback loads */
   position: absolute;
   inset: 0;
   width: 100%;
@@ -1430,7 +1431,9 @@ img.ext {
 .hero .ph {
   z-index: -2;
 }
-.tile .ph,
-.interest-card .ph {
+.tile span.ph,
+.interest-card span.ph {
+  inset: 0;
+  z-index: 0;
   background-size: 48px;
 }

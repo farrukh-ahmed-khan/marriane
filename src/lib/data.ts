@@ -60,12 +60,27 @@ export type Attraction = {
   categories: string[];
 };
 
+/**
+ * Sites that refuse to let other websites display their images (hotlink
+ * protection). Their photos are only used as a last resort.
+ */
+const BLOCKED_HOSTS = ["www.fs.usda.gov"];
+export const isBlocked = (src: string) => BLOCKED_HOSTS.some((h) => src.includes(`//${h}/`));
+
+/** Photo candidates for an attraction: banner first, then gallery; blocked hosts last. */
+export const photoCandidates = (a: Pick<Attraction, "banner" | "gallery">, max = 4) => {
+  const all = [a.banner, ...a.gallery].filter((p) => p !== null).map((p) => p.src);
+  return [...all.filter((s) => !isBlocked(s)), ...all.filter(isBlocked)].slice(0, max);
+};
+
 /** Small version of an attraction for grids/filters sent to the browser. */
-export type AttractionCard = Pick<Attraction, "slug" | "title" | "image" | "imageAlt" | "counties" | "categories">;
+export type AttractionCard = Pick<Attraction, "slug" | "title" | "imageAlt" | "counties" | "categories"> & {
+  images: string[];
+};
 export const toCard = (a: Attraction): AttractionCard => ({
   slug: a.slug,
   title: a.title,
-  image: a.image,
+  images: photoCandidates(a, 3),
   imageAlt: a.imageAlt,
   counties: a.counties,
   categories: a.categories,
@@ -118,17 +133,17 @@ export const countiesFor = (list: Pick<Attraction, "counties">[]) => {
 
 /** Shared images used across templates. */
 export const assets = {
-  logo: "/wp-content/uploads/2026/01/Marriane_Vydra-Oregon_County_Capers-Logo_Design-04-1.png",
-  countyBadge: "/wp-content/uploads/2026/01/Group-14-2.png",
-  listingHero: "/wp-content/uploads/2026/02/46e4758d7137dee0435af32470dbf6c1e7d971c3.jpg",
-  newsletterBg: "/wp-content/uploads/2026/01/news-letter.png",
-  footerWordmark: "/wp-content/uploads/2026/01/Heading-3-→-peakzy.png",
-  payment: "/wp-content/uploads/2026/01/payment.png.png",
+  logo: "/images/site/logo.png",
+  countyBadge: "/images/site/county-badge.png",
+  listingHero: "/images/site/listing-hero.jpg",
+  newsletterBg: "/images/site/newsletter-bg.png",
+  footerWordmark: "/images/site/footer-wordmark.png",
+  payment: "/images/site/payment-methods.png",
   icons: {
-    seat: "/wp-content/uploads/2026/02/Group-1171274791-1.png",
-    founded: "/wp-content/uploads/2026/02/Group-1171274792-1.png",
-    area: "/wp-content/uploads/2026/02/Group-1171274793-1.png",
-    population: "/wp-content/uploads/2026/02/Group-1171274794.png",
-    map: "/wp-content/uploads/2026/02/destination-1.png",
+    seat: "/images/site/icon-seat.png",
+    founded: "/images/site/icon-founded.png",
+    area: "/images/site/icon-area.png",
+    population: "/images/site/icon-population.png",
+    map: "/images/site/icon-map.png",
   },
 };

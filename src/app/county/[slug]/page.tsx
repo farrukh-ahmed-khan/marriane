@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Photo from "@/components/Photo";
 import { Breadcrumb, Html, PageHero } from "@/components/ui";
-import { assets, attractions, getAttraction, getCategory, getCounty } from "@/lib/data";
+import { assets, attractions, getAttraction, getCategory, getCounty, isBlocked, photoCandidates } from "@/lib/data";
 
 /**
  * ONE template for every attraction (data/attractions.json, generated
@@ -42,6 +42,8 @@ export default async function AttractionPage({ params }: Props) {
   const mapLink = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`;
   const timings = [...a.timings].sort((x, y) => DAY_ORDER.indexOf(x.day) - DAY_ORDER.indexOf(y.day));
   const sameHours = timings.length > 0 && timings.every((t) => t.hours === timings[0].hours);
+  // Photos from sites that block embedding can't be shown, so skip them.
+  const gallery = a.gallery.filter((p) => !isBlocked(p.src));
   const sources = [...new Map([a.banner, ...a.gallery].filter((p) => p?.sourcePage).map((p) => [p!.sourceSite, p!.sourcePage!])).entries()];
 
   const info = [
@@ -59,7 +61,7 @@ export default async function AttractionPage({ params }: Props) {
 
   return (
     <>
-      <PageHero title={a.title} image={a.banner?.src ?? a.image} />
+      <PageHero title={a.title} image={photoCandidates(a, 8)} />
 
       <div className="info-bar">
         <div className="container inner">
@@ -110,11 +112,11 @@ export default async function AttractionPage({ params }: Props) {
             </>
           )}
 
-          {a.gallery.length > 0 && (
+          {gallery.length > 0 && (
             <>
               <h2 className="block-title">Gallery</h2>
               <div className="photo-grid">
-                {a.gallery.map((p) => (
+                {gallery.map((p) => (
                   <figure key={p.src}>
                     <a href={p.src} target="_blank" rel="noopener noreferrer" className="frame">
                       <Photo src={p.src} alt={p.alt} hideOnError />

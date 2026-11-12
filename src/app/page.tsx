@@ -4,12 +4,12 @@ import Carousel from "@/components/Carousel";
 import Photo from "@/components/Photo";
 import { assets, attractionsInCategory, attractionsInCounty, categories, counties, getCounty, products } from "@/lib/data";
 
-const U = "/wp-content/uploads/2026/01";
+const U = "/images/home";
 
 const choices = [
-  { img: `${U}/Rectangle-6-7.png`, title: "Explore by Capers", text: "Find adventures that match your interests.", cta: "View All Capers", href: "/capers-categories/" },
-  { img: `${U}/Rectangle-6-8.png`, title: "Explore by County", text: "Start with any of Oregon’s 36 counties.", cta: "View All Counties", href: "/county-tags/" },
-  { img: `${U}/Rectangle-6-9.png`, title: "Popular Highlights", text: "See trending attractions across the state.", cta: "Explore Top Picks", href: "/county/" },
+  { img: `${U}/choice-capers.png`, title: "Explore by Capers", text: "Find adventures that match your interests.", cta: "View All Capers", href: "/capers-categories/" },
+  { img: `${U}/choice-county.png`, title: "Explore by County", text: "Start with any of Oregon’s 36 counties.", cta: "View All Counties", href: "/county-tags/" },
+  { img: `${U}/choice-highlights.png`, title: "Popular Highlights", text: "See trending attractions across the state.", cta: "Explore Top Picks", href: "/county/" },
 ];
 
 export default function Home() {
@@ -33,7 +33,7 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="hero hero-home">
-        <Image src={`${U}/Section.png`} alt="" fill priority sizes="100vw" className="bg" />
+        <Image src={`${U}/hero.png`} alt="" fill priority sizes="100vw" className="bg" />
         <div>
           <h1>
             Discover Oregon,
@@ -73,7 +73,7 @@ export default function Home() {
 
       {/* ABOUT */}
       <section className="section bg-section about-home" id="about">
-        <Image src={`${U}/about-1.png`} alt="" fill sizes="100vw" className="bg" />
+        <Image src={`${U}/about-bg.png`} alt="" fill sizes="100vw" className="bg" />
         <div className="container inner">
           <div>
             <h2>About Oregon County Capers</h2>
@@ -96,7 +96,7 @@ export default function Home() {
             <Link href="/history/" className="btn btn-green">Read More About Us</Link>
           </div>
           <div style={{ position: "relative", aspectRatio: "748 / 921", maxWidth: 520, width: "100%", justifySelf: "center" }}>
-            <Image src={`${U}/Group-16.png`} alt="Oregon waterfalls and coastline" fill sizes="(max-width: 860px) 100vw, 520px" />
+            <Image src={`${U}/about-collage.png`} alt="Oregon waterfalls and coastline" fill sizes="(max-width: 860px) 100vw, 520px" />
           </div>
         </div>
       </section>
@@ -120,7 +120,7 @@ export default function Home() {
 
       {/* FEATURED */}
       <section className="section bg-section">
-        <Image src={`${U}/Section-1.png`} alt="" fill sizes="100vw" className="bg" />
+        <Image src={`${U}/featured-bg.png`} alt="" fill sizes="100vw" className="bg" />
         <div className="container">
           <Carousel title="Featured County" itemWidth="min(560px, 85vw)">
             {featured.map((a) => (
@@ -165,7 +165,7 @@ export default function Home() {
       {/* MERCH */}
       {products.length > 0 && (
         <section className="section bg-section" style={{ background: "#1565d8" }}>
-          <Image src={`${U}/Background-14.png`} alt="" fill sizes="100vw" className="bg" />
+          <Image src={`${U}/merch-bg.png`} alt="" fill sizes="100vw" className="bg" />
           <div className="container">
             <Carousel title="Outfit Your Trip. Capture the Memories" itemWidth="min(300px, 80vw)" dark>
               {products.map((p) => (

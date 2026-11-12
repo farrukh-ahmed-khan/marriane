@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Oregon — land, people, and time. The natural and human history of Oregon and its tribal nations.",
 };
 
-const U = "/wp-content/uploads/2026/01";
+const U = "/images/history";
 
 const overview = [
   {
@@ -32,56 +32,56 @@ const overview = [
 const tribes = [
   {
     name: "Burns Paiute Tribe",
-    photo: "Container-6.png",
-    overlay: "Group-1171274782.png",
+    photo: "tribe-1-photo.png",
+    overlay: "tribe-1-badge.png",
     text: "The Burns Paiute are Northern Paiute people whose connections span eastern Oregon’s high desert and basin lands. Historically, their lifeways centered on seasonal movement across wide plains and around lake and marsh resources. Traditional foods such as camas, seeds and game, plus distinctive basketry and knowledge of the high desert ecology, underline a cultural relationship to place that continues today. The Burns Paiute maintain tribal programs focused on cultural preservation, health services, and economic development.",
   },
   {
     name: "Confederated Tribes of the Coos, Lower Umpqua & Siuslaw Indians",
-    photo: "Container-7.png",
-    overlay: "Group-1171274782-1.png",
+    photo: "tribe-2-photo.png",
+    overlay: "tribe-2-badge.png",
     text: "Made up of several local tribes and bands from Oregon’s southern and central coast, these nations have long been anchored in a maritime lifeway: canoe-building, sea and estuary fishing, and maritime craft. Their cultural calendar and ceremonial life reflect deep ties to coastal resources, and today the Confederated Tribes work to revive language, protect fish habitat, and sustain tribal enterprises.",
   },
   {
     name: "Confederated Tribes of the Grand Ronde",
-    photo: "Container-6.png",
-    overlay: "Group-1171274782.png",
+    photo: "tribe-3-photo.png",
+    overlay: "tribe-3-badge.png",
     text: "The Grand Ronde Confederation brings together many tribal bands from across western Oregon, northern California, and southwest Washington. The tribe’s history includes relocation and re-organization across the 19th and 20th centuries; today Grand Ronde operates cultural centers, language revival programs, and community services that support tribal members and guests interested in Indigenous histories.",
   },
   {
     name: "Confederated Tribes of Siletz Indians",
-    photo: "Container-9.png",
-    overlay: "Group-1171274782-3.png",
+    photo: "tribe-4-photo.png",
+    overlay: "tribe-4-badge.png",
     text: "The Siletz are a confederation of dozens of western Oregon tribal groups whose homelands stretch across the Oregon Coast and inland valleys. Despite 19th- and 20th-century upheavals (including forced removal and termination-era policies), the Siletz have rebuilt many cultural and governance institutions. Recent legal victories have restored important rights around hunting, fishing, and gathering — milestones in a long effort to reclaim tribal sovereignty and stewardship.",
   },
   {
     name: "Confederated Tribes of the Umatilla Indian Reservation",
-    photo: "Container-10.png",
-    overlay: "Group-1171274782-4.png",
+    photo: "tribe-5-photo.png",
+    overlay: "tribe-5-badge.png",
     text: "Composed primarily of the Cayuse, Umatilla, and Walla Walla peoples, the Umatilla Confederation historically occupied lands along the Columbia Plateau and nearby river corridors. Their cultural life has strong traditions of fishing (especially salmon), horse culture, and longhouse ceremony. Today the tribe runs cultural and natural resource programs that support fisheries restoration, youth education, and community health.",
   },
   {
     name: "Confederated Tribes of Warm Springs",
-    photo: "Container-12.png",
-    overlay: "Group-1171274782-5.png",
+    photo: "tribe-6-photo.png",
+    overlay: "tribe-6-badge.png",
     text: "The Warm Springs Indian Reservation stretches from the summit of the Cascade Mountains to the Deschutes River in North Central Oregon. The Confederated Tribes of Warm Springs includes the Warm Springs, Wasco and Paiute Tribes. In 1937, the three Tribes organized as the Confederated Tribes of the Warm Springs Reservation of Oregon by adopting a Constitution and bylaws for Tribal government. Despite the great loss of traditional culture that occurred as a result of settlement on the reservation, the people of the Warm Springs Reservation have succeeded in holding on to many of their ancient traditions and values. Their longhouses still ring with prayer songs that have been handed down for generations.",
   },
   {
     name: "Cow Creek Band of Umpqua Tribe of Indians",
-    photo: "Container-13.png",
-    overlay: "Group-1171274782-6.png",
+    photo: "tribe-7-photo.png",
+    overlay: "tribe-7-badge.png",
     text: "The Cow Creek Tribal Nation, located in Southwestern Oregon, has over 1,800 members who are governed by an elected eleven-member council known as the Tribal Board of Directors. The Cow Creek Tribe has a rich history in southern Oregon that reflects hard work, perseverance and the desire to be self-reliant. The Cow Creek Tribe never received the reservation their Treaty promised. Even without a reservation, the people remained in their homelands. The Tribal Government Office, located in Roseburg, Oregon, houses not only the Tribal Government body and programs, but also the Cow Creek Tribal Gaming Commission and the Cow Creek Health and Wellness Center.",
   },
   {
     name: "Coquille Indian Tribe",
-    photo: "Container-14.png",
-    overlay: "Group-1171274782-7.png",
+    photo: "tribe-8-photo.png",
+    overlay: "tribe-8-badge.png",
     text: "The Coquille Tribe has more than 1,100 members and has regained more than 10,000 acres of their ancestral homeland. Comprising a people whose ancestors lived in the lands of the Coquille River watershed and lower Coos Bay, the Coquille Indian Tribe’s service area covers 15,603 square miles of Coos, Curry, Douglas, Jackson and Lane counties. Approximately 350 Tribal members live in Coos County. After the United States reinstituted federal recognition to the Tribe and restored its full sovereignty rights in 1989, the Coquille Tribal government created an administrative program that now provides housing, health care, education, elder care, law enforcement and judicial services to its members.",
   },
   {
     name: "The Klamath Tribes",
-    photo: "Container-15.png",
-    overlay: "Group-1171274782-8.png",
+    photo: "tribe-9-photo.png",
+    overlay: "tribe-9-badge.png",
     text: "Centered historically around the Upper Klamath Basin and its lakes, the Klamath peoples (including Klamath, Modoc, and Yahooskin groups) developed lifeways that relied on freshwater fisheries, marshlands, and migratory patterns. Their knowledge of wetland ecology and seasonal resource cycles has been central to their identity. Contemporary tribal efforts focus on cultural resilience, water and habitat restoration, and intergenerational cultural transmission.",
   },
 ];
@@ -89,7 +89,7 @@ const tribes = [
 export default function HistoryPage() {
   return (
     <>
-      <PageHero title="History" image={`${U}/act-now-background.mp4.png`} />
+      <PageHero title="History" image={`${U}/hero.png`} />
 
       <section className="section history-intro">
         <div className="container inner">
@@ -105,7 +105,7 @@ export default function HistoryPage() {
             </p>
           </div>
           <div style={{ position: "relative", aspectRatio: "858 / 780" }}>
-            <Image src={`${U}/majestic-mountain-river-landscape-collage-1.png`} alt="Oregon landscape collage" fill sizes="(max-width: 860px) 100vw, 560px" />
+            <Image src={`${U}/collage.png`} alt="Oregon landscape collage" fill sizes="(max-width: 860px) 100vw, 560px" />
           </div>
         </div>
       </section>
@@ -127,7 +127,7 @@ export default function HistoryPage() {
             </div>
             <div style={{ position: "relative", aspectRatio: "1384 / 1114", alignSelf: "end" }}>
               <Image
-                src={`${U}/beautiful-low-angle-shot-historical-cape-disappointment-lighthouse-1.png`}
+                src={`${U}/lighthouse.png`}
                 alt="Cape Disappointment lighthouse"
                 fill
                 sizes="(max-width: 860px) 100vw, 440px"

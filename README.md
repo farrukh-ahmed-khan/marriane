@@ -1,81 +1,66 @@
 # Oregon County Capers — Next.js
 
-Next.js (App Router) version of the WordPress site
-`marriane-vydra-stage.devdesignbuild.com`. Same URLs, same images, same content —
-but every repeated page is generated from **one template + JSON data**.
+Static Next.js (App Router) site. Every repeated page is generated from **one
+template + JSON data**; nothing is loaded from the old WordPress site.
 
 ## Run it
 
 ```bash
 npm install
 npm run dev        # http://localhost:3000
-npm run build      # production build (all pages pre-rendered as static HTML)
+npm run build      # pre-renders every page (~2,200) as static HTML
 npm start
 ```
 
-## How content works
+## Where content comes from
 
-All content lives in `/data`. Images live in `public/wp-content/uploads/` (same paths as WordPress).
-
-| File | What it drives | Template |
+| Data | Source | Drives |
 | --- | --- | --- |
-| `data/counties.json` | 36 county pages `/county-tags/<slug>/` + counties list | `src/app/county-tags/[slug]/page.tsx` |
-| `data/attractions.json` | attraction pages `/county/<slug>/` | `src/app/county/[slug]/page.tsx` |
-| `data/categories.json` | category pages `/county-categories/<slug>/` + Capers page | `src/app/county-categories/[slug]/page.tsx` |
-| `data/capers.json` | `/capers/<slug>/` | `src/app/capers/[slug]/page.tsx` |
-| `data/products.json` | `/shop/`, `/product/<slug>/`, home merch carousel | `src/app/product/[slug]/page.tsx` |
+| `data/attractions.json` | **generated** from `doc/*.pdf` by `npm run import` | `/county/<slug>/` (one page per attraction) |
+| `data/categories.json` | **generated** from `doc/*.pdf` | `/county-categories/<slug>/`, Capers page, filters |
+| `data/counties.json` | edit by hand | `/county-tags/<slug>/` (36 county pages) |
+| `data/capers.json`, `data/products.json` | edit by hand | `/capers/<slug>/`, `/shop/`, `/product/<slug>/` |
 
-### Add a new attraction to a county
+Static images (logo, county badges, hero backgrounds) are local files in `public/`.
+Attraction photos are the **image links from the documents**, loaded directly from
+the site that hosts them.
 
-Add an object to `data/attractions.json`:
+## Adding / updating attractions
 
-```json
-{
-  "id": 9001,
-  "slug": "multnomah-falls",
-  "title": "Multnomah Falls",
-  "order": 100,
-  "image": "/wp-content/uploads/my-images/multnomah.jpg",
-  "imageAlt": "Multnomah Falls",
-  "contentHtml": "<p>Oregon's tallest waterfall…</p>",
-  "excerpt": "Oregon's tallest waterfall…",
-  "website": "fs.usda.gov/…", "websiteUrl": "",
-  "phone": "", "email": "",
-  "address": "53000 E Historic Columbia River Hwy, Bridal Veil, OR",
-  "mapQuery": "",
-  "timings": [{ "day": "Monday", "hours": "Open daily" }],
-  "counties": ["multnomah-county"],
-  "categories": ["waterfalls"]
-}
-```
+1. Put the county document in `doc/` (same format as the existing ones:
+   one attraction per section with INFO BAR AND MAP, TOP BANNER PHOTO, PHOTO GALLERY,
+   ABOUT, NOTE UNDER ABOUT TEXT, TIMINGS).
+2. Run `npm run import` — it rewrites `data/attractions.json` and `data/categories.json`
+   from **all** PDFs in `doc/` and prints a summary.
+3. `npm run build`.
 
-That's it — the attraction page is created, it appears on the Multnomah County page,
-in the Waterfalls category, in the filters and in the home-page carousels.
-Put new images anywhere under `public/` and reference them with a path starting with `/`.
+Notes on the import (`scripts/import-pdfs.mjs`):
+- A place listed under several categories in the same county (same text) becomes one
+  page with several categories.
+- Duplicate PDFs (e.g. `Curry_County (1).pdf`) are detected and skipped.
+- "leave blank" values become empty fields.
+- The county comes from the "County" row, so it must match a county in `counties.json`
+  (e.g. `Hood River` → `hood-river-county`).
+- `node scripts/pdf-dump.mjs doc/X.pdf` prints a document's text and links — useful if a
+  new document doesn't import as expected.
 
-### Edit a county
+Don't hand-edit `attractions.json` — the next import overwrites it. Fix the document instead.
 
-Edit its entry in `data/counties.json` (seat, founded, area, population, `contentHtml`, `gallery`, …).
+## Photos that can't be shown
 
-## Re-importing from WordPress
+Some sites block other websites from displaying their images (hotlink protection).
+`www.fs.usda.gov` does this; it's listed in `BLOCKED_HOSTS` in `src/lib/data.ts`, so those
+photos are tried last. Any photo that fails to load falls back to the attraction's next photo,
+then to a neutral placeholder.
 
-While WordPress is still the place you edit content, pull the latest into the JSON files:
-
-```bash
-npm run import
-# or from a different WordPress URL
-WP_URL=https://example.com npm run import
-```
-
-`scripts/import-wordpress.mjs` reads the WordPress REST API plus the rendered pages
-(JetEngine fields aren't in the API), rewrites image URLs to local paths and downloads
-new images. **It overwrites the files in `/data`**, so don't hand-edit JSON and re-import
-at the same time — pick one source of truth.
+`reports/attractions-needing-photos.csv` lists attractions with no displayable photo.
+To fix one, either put a photo from a site that allows embedding in the document, or download
+a photo you have rights to into `public/` and reference it as `/path/to/photo.jpg`.
 
 ## Not migrated (needs a decision)
 
-- **Shop checkout / cart / my-account** (WooCommerce). Products display; “Add to cart” is disabled.
-  Hook up Stripe, Shopify Buy Button or Snipcart when ready.
-- **Newsletter form** shows a thank-you message but doesn't send anywhere yet
-  (see `src/components/Newsletter.tsx`).
-- Footer contact details / social links are the same placeholders as the WordPress site.
+- **Shop checkout / cart / my-account**: products display; "Add to cart" is disabled.
+- **Newsletter form** doesn't send anywhere yet (`src/components/Newsletter.tsx`).
+- Footer contact details / social links are placeholders.
+- 12 counties (Grant, Multnomah, Polk, Sherman, Tillamook, Umatilla, Union, Wallowa, Wasco,
+  Washington, Wheeler, Yamhill) have no document yet — their pages say attractions are coming soon.

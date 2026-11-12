@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import AttractionBrowser from "@/components/AttractionBrowser";
 import { Breadcrumb, PageHero } from "@/components/ui";
-import { attractionsInCategory, categories, countiesFor, getCategory, toCard } from "@/lib/data";
+import { attractionsInCategory, categories, countiesFor, getCategory, photoCandidates, toCard } from "@/lib/data";
 
 /** ONE template for every attraction category (Museums, State Parks, …). */
 export function generateStaticParams() {
@@ -23,7 +23,7 @@ export default async function CategoryPage({ params }: Props) {
 
   return (
     <>
-      <PageHero title={category.name} image={list.find((a) => a.banner)?.banner?.src ?? null} />
+      <PageHero title={category.name} image={list.slice(0, 5).flatMap((a) => photoCandidates(a, 1))} />
       <div className="container" style={{ paddingTop: 28, marginBottom: -20 }}>
         <Breadcrumb items={[{ href: "/", label: "Home" }, { href: "/capers-categories/", label: "Capers" }, { label: category.name }]} />
       </div>
