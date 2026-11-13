@@ -66,7 +66,7 @@ export function Trail({ items }: { items: { href?: string; label: string }[] }) 
 export function AttractionTile({ a }: { a: AttractionCard }) {
   return (
     <Link href={`/county/${a.slug}/`} className="tile">
-      <Photo src={a.images} alt={a.imageAlt} sizes="(max-width: 767px) 50vw, 240px" />
+      <Photo src={a.images} alt={a.imageAlt} sizes="(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1024px) 33vw, 240px" />
       <span className="tile-title">{a.title}</span>
     </Link>
   );
@@ -78,7 +78,7 @@ export function CountyCard({ c }: { c: County }) {
     <Link href={`/county-tags/${c.slug}/`} className="county-card">
       <span className="tag">{c.name}</span>
       <div className="img">
-        <Photo src={c.cardImage || c.heroImage} alt={c.name} sizes="(max-width: 767px) 50vw, (max-width: 1024px) 33vw, 254px" />
+        <Photo src={c.cardImage || c.heroImage} alt={c.name} sizes="(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1024px) 33vw, 254px" />
       </div>
       <div className="badge">
         <Photo src={c.logo || assets.countyBadge} alt="" sizes="80px" style={{ objectFit: "contain" }} />

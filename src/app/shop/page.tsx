@@ -22,7 +22,7 @@ export default function ShopPage() {
             {products.map((p) => (
               <Link key={p.slug} href={`/product/${p.slug}/`} className="product-card">
                 <div className="img">
-                  {p.image && <Image src={p.image} alt={p.name} fill sizes="(max-width: 767px) 50vw, 300px" style={{ objectFit: "contain" }} />}
+                  {p.image && <Image src={p.image} alt={p.name} fill sizes="(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1024px) 33vw, 300px" style={{ objectFit: "contain" }} />}
                 </div>
                 <h3>{p.name}</h3>
                 {p.shortDescription && <p>{p.shortDescription}</p>}

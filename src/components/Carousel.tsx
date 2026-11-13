@@ -44,7 +44,7 @@ export default function Carousel({
 
   return (
     <div
-      className={[dark && "on-dark", bleed && "carousel-bleed", (dark || lightArrows) && "carousel-light-arrows"].filter(Boolean).join(" ")}
+      className={["carousel", dark && "on-dark", bleed && "carousel-bleed", (dark || lightArrows) && "carousel-light-arrows"].filter(Boolean).join(" ")}
       style={{ "--arrow-inset": arrowInset ?? (bleed ? "-160px" : "-15px") } as CSSProperties}
     >
       <div className="carousel-head">

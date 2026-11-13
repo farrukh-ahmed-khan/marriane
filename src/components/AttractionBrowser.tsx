@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useId, useMemo, useState } from "react";
 import type { AttractionCard } from "@/lib/data";
 import { AttractionTile } from "./ui";
 
@@ -35,6 +35,8 @@ export default function AttractionBrowser({
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<string[]>([]);
   const [limit, setLimit] = useState(PAGE);
+  const [filtersOpen, setFiltersOpen] = useState(false);
+  const filterPanelId = useId();
 
   const counts = useMemo(() => {
     const m: Record<string, number> = {};
@@ -71,25 +73,37 @@ export default function AttractionBrowser({
           />
         </div>
         {filters.length > 1 && (
-          <div className="box filter-panel">
-            <h2>{filterTitle}</h2>
-            <ul className="filter-list">
-              {filters.map((c) => (
-                <li key={c.slug}>
-                  <label>
-                    <input type="checkbox" checked={selected.includes(c.slug)} onChange={() => toggle(c.slug)} />
-                    {c.name}
-                    <span className="n">{counts[c.slug] || 0}</span>
-                  </label>
-                </li>
-              ))}
-            </ul>
-            {selected.length > 0 && (
-              <button className="clear-btn" onClick={() => setSelected([])}>
-                Clear filters
-              </button>
-            )}
-          </div>
+          <>
+            <button
+              type="button"
+              className="filter-toggle"
+              aria-expanded={filtersOpen}
+              aria-controls={filterPanelId}
+              onClick={() => setFiltersOpen((value) => !value)}
+            >
+              {filtersOpen ? "Hide filters" : filterTitle}
+              {selected.length > 0 && ` (${selected.length} selected)`}
+            </button>
+            <div id={filterPanelId} className={`box filter-panel${filtersOpen ? " is-open" : ""}`}>
+              <h2>{filterTitle}</h2>
+              <ul className="filter-list">
+                {filters.map((c) => (
+                  <li key={c.slug}>
+                    <label>
+                      <input type="checkbox" checked={selected.includes(c.slug)} onChange={() => toggle(c.slug)} />
+                      {c.name}
+                      <span className="n">{counts[c.slug] || 0}</span>
+                    </label>
+                  </li>
+                ))}
+              </ul>
+              {selected.length > 0 && (
+                <button className="clear-btn" onClick={() => setSelected([])}>
+                  Clear filters
+                </button>
+              )}
+            </div>
+          </>
         )}
       </aside>
 

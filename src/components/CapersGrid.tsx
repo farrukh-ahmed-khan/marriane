@@ -30,7 +30,7 @@ export default function CapersGrid({ items }: { items: Item[] }) {
           {list.map((c) => (
             <Link key={c.slug} href={`/county-categories/${c.slug}/`} className="cat-card">
               <div className="img">
-                <Photo src={c.image} alt={c.name} sizes="(max-width: 767px) 50vw, 300px" />
+                <Photo src={c.image} alt={c.name} sizes="(max-width: 479px) 100vw, (max-width: 767px) 50vw, (max-width: 1024px) 33vw, 300px" />
               </div>
               <h3>{c.name}</h3>
               <p className="count-note">{c.count} places</p>

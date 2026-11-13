@@ -20,6 +20,14 @@ export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
 
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : !href.includes("#") && pathname.startsWith(href.replace(/\/$/, ""));
@@ -27,11 +35,11 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="bar">
-        <nav className={open ? "open" : ""} aria-label="Main">
+        <nav id="main-navigation" className={open ? "open" : ""} aria-label="Main">
           <ul>
             {NAV.map((item) => (
               <li key={item.label}>
-                <Link href={item.href} className={isActive(item.href) ? "active" : ""}>
+                <Link href={item.href} className={isActive(item.href) ? "active" : ""} onClick={() => setOpen(false)}>
                   {item.label}
                 </Link>
               </li>
@@ -39,7 +47,7 @@ export default function Header() {
           </ul>
         </nav>
         <Link href="/" className="logo" aria-label="Oregon County Capers home">
-          <Image src={assets.logo} alt="Oregon County Capers" fill sizes="(max-width: 1024px) 80px, 140px" style={{ objectFit: "contain" }} priority />
+          <Image src={assets.logo} alt="Oregon County Capers" fill sizes="(max-width: 1280px) 80px, 140px" style={{ objectFit: "contain" }} priority />
         </Link>
         <div className="actions">
           <Link href="/county/" aria-label="Search attractions">
@@ -62,7 +70,7 @@ export default function Header() {
             </svg>
           </Link>
         </div>
-        <button className="menu-toggle" aria-label="Toggle menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+        <button className="menu-toggle" type="button" aria-label={open ? "Close menu" : "Open menu"} aria-controls="main-navigation" aria-expanded={open} onClick={() => setOpen(!open)}>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d={open ? "M6 6l12 12M18 6 6 18" : "M4 7h16M4 12h16M4 17h16"} />
           </svg>
