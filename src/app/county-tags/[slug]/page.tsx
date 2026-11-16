@@ -25,16 +25,44 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
+type StatValue = { main: string; note?: string };
+
+/**
+ * County facts are written in different ways in the data
+ * ("426,280, based on the U.S. Census Bureau's July 1, 2025 population estimate",
+ * "40,926 (U.S. Census Bureau estimate, July 1, 2025)", "Approximately 1,879 square miles", …).
+ * Split them into a short main figure + a small note so every card looks the same.
+ */
+function formatPopulation(raw: string): StatValue {
+  const num = raw.match(/^\s*(\d{1,3}(?:,\d{3})+|\d{3,})/); // "426,280" (not the comma after it)
+  if (!num) return { main: "—" }; // value missing or not a population figure
+  const year = raw.match(/July 1,\s*(\d{4})/i)?.[1];
+  const note = /census/i.test(raw) ? `${year ? `${year} ` : ""}Census estimate` : undefined;
+  return { main: num[1], note };
+}
+
+function formatArea(raw: string): StatValue {
+  const total = raw.match(/([\d,]+)\s*square miles/i);
+  if (!total) return { main: raw || "—" };
+  const split = raw.match(/([\d,]+)\s*square miles of land and ([\d,]+)\s*square miles of water/i);
+  const note = split
+    ? `${split[1]} sq mi land · ${split[2]} sq mi water`
+    : /approx/i.test(raw)
+      ? "Approximate"
+      : undefined;
+  return { main: `${total[1]} sq mi`, note };
+}
+
 export default async function CountyPage({ params }: Props) {
   const county = getCounty((await params).slug);
   if (!county) notFound();
 
   const list = attractionsInCounty(county.slug);
-  const stats = [
-    { icon: assets.icons.seat, label: "County Seat:", value: county.seat },
-    { icon: assets.icons.founded, label: "Founded:", value: county.founded },
-    { icon: assets.icons.area, label: "Area:", value: county.area },
-    { icon: assets.icons.population, label: "Population:", value: county.population },
+  const stats: { icon: string; label: string; value: StatValue }[] = [
+    { icon: assets.icons.seat, label: "County Seat:", value: { main: county.seat || "—" } },
+    { icon: assets.icons.founded, label: "Founded:", value: { main: county.founded || "—" } },
+    { icon: assets.icons.area, label: "Area:", value: formatArea(county.area) },
+    { icon: assets.icons.population, label: "Population:", value: formatPopulation(county.population) },
   ];
   const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(county.mapLabel)}`;
 
@@ -58,7 +86,8 @@ export default async function CountyPage({ params }: Props) {
                 <Image src={s.icon} alt="" fill sizes="50px" />
               </div>
               <h3>{s.label}</h3>
-              {s.value || "—"}
+              <span className="stat-value">{s.value.main}</span>
+              {s.value.note && <span className="stat-note">{s.value.note}</span>}
             </div>
           ))}
           <a className="stat map" href={mapUrl} target="_blank" rel="noopener noreferrer">
@@ -66,7 +95,7 @@ export default async function CountyPage({ params }: Props) {
               <Image src={assets.icons.map} alt="" fill sizes="50px" />
             </div>
             <h3>MAP</h3>
-            {county.mapLabel}
+            <span className="stat-note">{county.mapLabel}</span>
           </a>
         </div>
       </div>
