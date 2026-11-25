@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import AttractionBrowser from "@/components/AttractionBrowser";
+import MapCard from "@/components/MapCard";
 import { Breadcrumb, Html, PageHero } from "@/components/ui";
 import { assets, attractionsInCounty, categoriesFor, counties, getCounty, toCard } from "@/lib/data";
 
@@ -64,7 +65,6 @@ export default async function CountyPage({ params }: Props) {
     { icon: assets.icons.area, label: "Area:", value: formatArea(county.area) },
     { icon: assets.icons.population, label: "Population:", value: formatPopulation(county.population) },
   ];
-  const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(county.mapLabel)}`;
 
   return (
     <>
@@ -90,13 +90,7 @@ export default async function CountyPage({ params }: Props) {
               {s.value.note && <span className="stat-note">{s.value.note}</span>}
             </div>
           ))}
-          <a className="stat map" href={mapUrl} target="_blank" rel="noopener noreferrer">
-            <div className="icon">
-              <Image src={assets.icons.map} alt="" fill sizes="50px" />
-            </div>
-            <h3>MAP</h3>
-            <span className="stat-note">{county.mapLabel}</span>
-          </a>
+          <MapCard countyName={county.name} mapLabel={county.mapLabel} mapmeUrl={county.mapmeUrl} icon={assets.icons.map} />
         </div>
       </div>
 

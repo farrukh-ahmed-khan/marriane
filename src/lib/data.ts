@@ -28,6 +28,8 @@ export type County = {
   area: string;
   population: string;
   mapLabel: string;
+  /** Published Mapme map for this county (e.g. "https://viewer.mapme.com/…"). Empty = use Google Maps. */
+  mapmeUrl?: string;
   contentHtml: string;
   gallery: string[];
 };
